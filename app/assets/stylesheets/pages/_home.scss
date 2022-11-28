@@ -11,6 +11,14 @@
   --lightTwo: #FFFFFF; // COR DO TEXT DOS BOTOES
 }
 
+.mapboxgl-ctrl-geocoder--input {
+  background-color: #24685D;
+  color: #FFFFFF;
+}
+
+.mapboxgl-ctrl-geocoder {
+  color: white;
+}
 .dark {
   --mainColor: #64bcf4;
   --hoverColor: #5bacdf;
