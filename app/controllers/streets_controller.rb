@@ -15,3 +15,4 @@ class StreetsController < ApplicationController
       }
     end
   end
+end
