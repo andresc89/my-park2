@@ -9,21 +9,21 @@
               <img src="app/assets/images/img_placeholder.jpg"
                 class="rounded-circle img-fluid" style="width: 150px;" />
             </div>
-            <h1 class="mb-2"> @user.Username</h1>
-            <p class="text-muted mb-4">@Username <span class="mx-2"></span></p>
+            <h1 class="mb-2"> <%= @user.first_name %> </h1>
+            <p class="mb-4" <%= @user.first_name %>> <span class="mx-2"></span></p>
 
             <div class="mb-4 pb-2">
              <h6 style="color: #03DA9F">Informação Pessoal</h6>
 
               <p style="color: #828281">Email:</p>
-              <p style="color: white">display emaaaaail</p>
+              <p style="color: white"> <%= @user.email %></p>
               <br>
               <p style="color: #828281">Morada:</p>
               <p style="color: white">Display@daMorada.com</p>
               <br>
             </div>
               <br>
-              <a class="btn" href/link_to >Edit</a>
+              <a class="btn" href="edit.html" >Edit</a>
 
           </div>
         </div>
