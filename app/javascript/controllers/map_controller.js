@@ -12,7 +12,8 @@ export default class extends Controller {
 
     this.map = new mapboxgl.Map({
       container: this.element,
-      style: "mapbox://styles/mapbox/dark-v11"
+      //style: "mapbox://styles/mapbox/dark-v11"
+        style: "mapbox://styles/lateingame/clb28me8n003h14pprlv7piz9"
     })
     this.#addMarkersToMap()
     if ( this.markersValue.length ) { this.#fitMapToMarkers() }
@@ -20,10 +21,14 @@ export default class extends Controller {
     this.map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
       mapboxgl: mapboxgl }))
   }
+
   #addMarkersToMap() {
     this.markersValue.forEach((marker) => {
+      const popup = new mapboxgl.Popup().setHTML(marker.info_window)
+      console.log(popup)
       new mapboxgl.Marker()
         .setLngLat([ marker.lng, marker.lat ])
+        .setPopup(popup)
         .addTo(this.map)
     })
   }
@@ -34,6 +39,5 @@ export default class extends Controller {
     });
 
     this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
-    console.log(4)
   }
 }

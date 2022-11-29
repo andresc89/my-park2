@@ -1,0 +1,689 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "id": 1,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.618369781780782,
+                    41.1412280102478
+                ]
+            },
+            "properties": {
+                "objectid": 1,
+                "id": "01",
+                "designacao": "AlfÃ¢ndega",
+                "toponimia": "Rua Nova da AlfÃ¢ndega",
+                "implantacao": "SUP",
+                "concessionado": "S",
+                "entid_gest": "CMP",
+                "contac_entid_gest": "222097000",
+                "contac_parque": "223326991",
+                "data_inÃ­cio_contrato": 1469318400000,
+                "data_fim_contrato": 1627084800000,
+                "nÂº_lug_ligeiros": 199,
+                "nÂº_lug_mob_reduz": 6,
+                "nÂº_lug_moto_ciclo": 8,
+                "nÂº_lug_veloc": 10,
+                "nÂº_lug_pesad": 0,
+                "nÂº_lug_veic_eletr": 2,
+                "hor_func": "24H",
+                "data__atualiz": 1541548800000,
+                "data_ult_verific": 1541548800000,
+                "description": "Proibido o acesso a Autocaravanas, Rulotes e veÃ­culos equiparados. Parque subconcessionado Ã  CMP, pelo IP PatrimÃ³nio terminando a prazo em 24/07/2021.",
+                "morad_entid_gest": "PraÃ§a do General Humberto Delgado, 4049-001 Porto",
+                "utilizador": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 2,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.628926855503602,
+                    41.1486867323409
+                ]
+            },
+            "properties": {
+                "objectid": 2,
+                "id": "02",
+                "designacao": "Caminhos do RomÃ¢ntico",
+                "toponimia": "Rua de Vilar",
+                "implantacao": "ESTR",
+                "concessionado": "N",
+                "entid_gest": "CMP",
+                "contac_entid_gest": "222097000",
+                "contac_parque": "226003057",
+                "data_inÃ­cio_contrato": null,
+                "data_fim_contrato": null,
+                "nÂº_lug_ligeiros": 105,
+                "nÂº_lug_mob_reduz": 0,
+                "nÂº_lug_moto_ciclo": 0,
+                "nÂº_lug_veloc": 0,
+                "nÂº_lug_pesad": 0,
+                "nÂº_lug_veic_eletr": 0,
+                "hor_func": "24H",
+                "data__atualiz": 1541548800000,
+                "data_ult_verific": 1541548800000,
+                "description": "SÃ³ para residentes.",
+                "morad_entid_gest": "PraÃ§a do General Humberto Delgado, 4049-001 Porto",
+                "utilizador": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 3,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.608106920487643,
+                    41.142793459136016
+                ]
+            },
+            "properties": {
+                "objectid": 3,
+                "id": "03",
+                "designacao": "Duque de LoulÃ©",
+                "toponimia": "Rua de Arnaldo Gama",
+                "implantacao": "SUP",
+                "concessionado": "N",
+                "entid_gest": "CMP",
+                "contac_entid_gest": "222097000",
+                "contac_parque": "222000363",
+                "data_inÃ­cio_contrato": null,
+                "data_fim_contrato": null,
+                "nÂº_lug_ligeiros": 124,
+                "nÂº_lug_mob_reduz": 4,
+                "nÂº_lug_moto_ciclo": 10,
+                "nÂº_lug_veloc": 10,
+                "nÂº_lug_pesad": null,
+                "nÂº_lug_veic_eletr": 4,
+                "hor_func": "24H",
+                "data__atualiz": 1541548800000,
+                "data_ult_verific": 1541548800000,
+                "description": "Dois postos de carregamento de VeÃ­culos ElÃ©tricos.",
+                "morad_entid_gest": "PraÃ§a do General Humberto Delgado, 4049-001 Porto",
+                "utilizador": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 4,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.609560551993123,
+                    41.15071139207676
+                ]
+            },
+            "properties": {
+                "objectid": 4,
+                "id": "04",
+                "designacao": "Trindade",
+                "toponimia": "Rua de Fernandes TomÃ¡s",
+                "implantacao": "ESTR",
+                "concessionado": "N",
+                "entid_gest": "CMP",
+                "contac_entid_gest": "222097000",
+                "contac_parque": "223323622",
+                "data_inÃ­cio_contrato": null,
+                "data_fim_contrato": null,
+                "nÂº_lug_ligeiros": 292,
+                "nÂº_lug_mob_reduz": 5,
+                "nÂº_lug_moto_ciclo": 8,
+                "nÂº_lug_veloc": 10,
+                "nÂº_lug_pesad": 0,
+                "nÂº_lug_veic_eletr": 45,
+                "hor_func": "24H",
+                "data__atualiz": 1541548800000,
+                "data_ult_verific": 1541548800000,
+                "description": "",
+                "morad_entid_gest": "PraÃ§a do General Humberto Delgado, 4049-001 Porto",
+                "utilizador": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 5,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.612364932003636,
+                    41.143504420485336
+                ]
+            },
+            "properties": {
+                "objectid": 5,
+                "id": "05",
+                "designacao": "Viela do Anjo",
+                "toponimia": "Rua de Mouzinho da Silveira",
+                "implantacao": "ESTR",
+                "concessionado": "N",
+                "entid_gest": "CMP",
+                "contac_entid_gest": "222097000",
+                "contac_parque": "N/a",
+                "data_inÃ­cio_contrato": null,
+                "data_fim_contrato": null,
+                "nÂº_lug_ligeiros": 22,
+                "nÂº_lug_mob_reduz": 0,
+                "nÂº_lug_moto_ciclo": 0,
+                "nÂº_lug_veloc": 0,
+                "nÂº_lug_pesad": 0,
+                "nÂº_lug_veic_eletr": 4,
+                "hor_func": "24H",
+                "data__atualiz": 1541548800000,
+                "data_ult_verific": 1541548800000,
+                "description": "SÃ³ para residentes.",
+                "morad_entid_gest": "PraÃ§a do General Humberto Delgado, 4049-001 Porto",
+                "utilizador": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 6,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.615158531375977,
+                    41.141017816261126
+                ]
+            },
+            "properties": {
+                "objectid": 6,
+                "id": "07",
+                "designacao": "PraÃ§a do Infante D. Henrique",
+                "toponimia": "Rua do Infante D. Henrique",
+                "implantacao": "ESTR",
+                "concessionado": "S",
+                "entid_gest": "Sabaportugal",
+                "contac_entid_gest": "223395150",
+                "contac_parque": "222080593",
+                "data_inÃ­cio_contrato": 1002844800000,
+                "data_fim_contrato": 1633996800000,
+                "nÂº_lug_ligeiros": 314,
+                "nÂº_lug_mob_reduz": 4,
+                "nÂº_lug_moto_ciclo": 0,
+                "nÂº_lug_veloc": 8,
+                "nÂº_lug_pesad": 0,
+                "nÂº_lug_veic_eletr": 0,
+                "hor_func": "24H",
+                "data__atualiz": 1541548800000,
+                "data_ult_verific": 1541548800000,
+                "description": null,
+                "morad_entid_gest": "Avenida dos Aliados, 54 - 3Âº, 4000-064 Porto",
+                "utilizador": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 7,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.60663248688845,
+                    41.15248221950801
+                ]
+            },
+            "properties": {
+                "objectid": 7,
+                "id": "08",
+                "designacao": "Silo Auto",
+                "toponimia": "Rua de Guedes de Azevedo",
+                "implantacao": "ESTR",
+                "concessionado": "S",
+                "entid_gest": "Porto Lazer",
+                "contac_entid_gest": "226199860",
+                "contac_parque": "937772911",
+                "data_inÃ­cio_contrato": 1532995200000,
+                "data_fim_contrato": null,
+                "nÂº_lug_ligeiros": 804,
+                "nÂº_lug_mob_reduz": null,
+                "nÂº_lug_moto_ciclo": null,
+                "nÂº_lug_veloc": null,
+                "nÂº_lug_pesad": 0,
+                "nÂº_lug_veic_eletr": null,
+                "hor_func": "24H",
+                "data__atualiz": 1541548800000,
+                "data_ult_verific": 1541548800000,
+                "description": null,
+                "morad_entid_gest": "PortoLazer - ServiÃ§os Centrais, Rua Bartolomeu Velho, 648, 4150-124 Porto",
+                "utilizador": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 8,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.614539546255054,
+                    41.145978311387694
+                ]
+            },
+            "properties": {
+                "objectid": 8,
+                "id": "09",
+                "designacao": "PraÃ§a de Lisboa (ClÃ©rigos)",
+                "toponimia": "Rua de S. Filipe de Nery",
+                "implantacao": "ESTR",
+                "concessionado": "S",
+                "entid_gest": "Sabaportugal",
+                "contac_entid_gest": "223395150",
+                "contac_parque": "222083267",
+                "data_inÃ­cio_contrato": 719107200000,
+                "data_fim_contrato": 1672444800000,
+                "nÂº_lug_ligeiros": null,
+                "nÂº_lug_mob_reduz": null,
+                "nÂº_lug_moto_ciclo": null,
+                "nÂº_lug_veloc": null,
+                "nÂº_lug_pesad": null,
+                "nÂº_lug_veic_eletr": null,
+                "hor_func": "24H",
+                "data__atualiz": 1541548800000,
+                "data_ult_verific": 1541548800000,
+                "description": "InterligaÃ§Ã£o com os parques da PraÃ§a Carlos Alberto e da PraÃ§a Gomes Teixeira (LeÃµes).",
+                "morad_entid_gest": "Avenida dos Aliados, 54 - 3Âº, 4000-064 Porto",
+                "utilizador": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 9,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.617748126285766,
+                    41.14458501400899
+                ]
+            },
+            "properties": {
+                "objectid": 9,
+                "id": "10",
+                "designacao": "PalÃ¡cio da JustiÃ§a",
+                "toponimia": "Rua do Dr. AntÃ³nio de Sousa Macedo",
+                "implantacao": "ESTR",
+                "concessionado": "S",
+                "entid_gest": "Sabaportugal",
+                "contac_entid_gest": "223395150",
+                "contac_parque": "223326957",
+                "data_inÃ­cio_contrato": 1006473600000,
+                "data_fim_contrato": 1672444800000,
+                "nÂº_lug_ligeiros": 325,
+                "nÂº_lug_mob_reduz": 4,
+                "nÂº_lug_moto_ciclo": 0,
+                "nÂº_lug_veloc": 10,
+                "nÂº_lug_pesad": 0,
+                "nÂº_lug_veic_eletr": 0,
+                "hor_func": "24H",
+                "data__atualiz": 1541548800000,
+                "data_ult_verific": 1541548800000,
+                "description": null,
+                "morad_entid_gest": "Avenida dos Aliados, 54 - 3Âº, 4000-064 Porto",
+                "utilizador": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 10,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.615580862332417,
+                    41.14730858675977
+                ]
+            },
+            "properties": {
+                "objectid": 10,
+                "id": "11",
+                "designacao": "PraÃ§a Gomes Teixeira (LeÃµes)",
+                "toponimia": "PraÃ§a de Gomes Teixeira",
+                "implantacao": "ESTR",
+                "concessionado": "S",
+                "entid_gest": "Sabaportugal",
+                "contac_entid_gest": "223395150",
+                "contac_parque": "222083267",
+                "data_inÃ­cio_contrato": 1008979200000,
+                "data_fim_contrato": 1672444800000,
+                "nÂº_lug_ligeiros": null,
+                "nÂº_lug_mob_reduz": null,
+                "nÂº_lug_moto_ciclo": null,
+                "nÂº_lug_veloc": null,
+                "nÂº_lug_pesad": null,
+                "nÂº_lug_veic_eletr": null,
+                "hor_func": "24H",
+                "data__atualiz": 1541548800000,
+                "data_ult_verific": 1541548800000,
+                "description": "InterligaÃ§Ã£o com os parques da PraÃ§a de Lisboa (ClÃ©rigos) e da PraÃ§a Carlos Alberto.",
+                "morad_entid_gest": "Avenida dos Aliados, 54 - 3Âº, 4000-064 Porto",
+                "utilizador": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 11,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.615701695425427,
+                    41.14831058320165
+                ]
+            },
+            "properties": {
+                "objectid": 11,
+                "id": "12",
+                "designacao": "PraÃ§a Carlos Alberto",
+                "toponimia": "PraÃ§a de Carlos Alberto",
+                "implantacao": "ESTR",
+                "concessionado": "S",
+                "entid_gest": "Sabaportugal",
+                "contac_entid_gest": "223395150",
+                "contac_parque": "222083267",
+                "data_inÃ­cio_contrato": 1022025600000,
+                "data_fim_contrato": 1672444800000,
+                "nÂº_lug_ligeiros": null,
+                "nÂº_lug_mob_reduz": null,
+                "nÂº_lug_moto_ciclo": null,
+                "nÂº_lug_veloc": null,
+                "nÂº_lug_pesad": null,
+                "nÂº_lug_veic_eletr": null,
+                "hor_func": "24H",
+                "data__atualiz": 1541548800000,
+                "data_ult_verific": 1541548800000,
+                "description": "InterligaÃ§Ã£o com os parques da PraÃ§a de Lisboa (ClÃ©rigos) e da PraÃ§a Gomes Teixeira (LeÃµes).",
+                "morad_entid_gest": "Avenida dos Aliados, 54 - 3Âº, 4000-064 Porto",
+                "utilizador": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 12,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.608971295453046,
+                    41.147418509184455
+                ]
+            },
+            "properties": {
+                "objectid": 12,
+                "id": "13",
+                "designacao": "PraÃ§a D. JoÃ£o I",
+                "toponimia": "PraÃ§a de D. JoÃ£o I",
+                "implantacao": "ESTR",
+                "concessionado": "S",
+                "entid_gest": "Empark",
+                "contac_entid_gest": "213847300",
+                "contac_parque": "223251914",
+                "data_inÃ­cio_contrato": 1007078400000,
+                "data_fim_contrato": 1638230400000,
+                "nÂº_lug_ligeiros": 384,
+                "nÂº_lug_mob_reduz": 4,
+                "nÂº_lug_moto_ciclo": 0,
+                "nÂº_lug_veloc": 0,
+                "nÂº_lug_pesad": 0,
+                "nÂº_lug_veic_eletr": 0,
+                "hor_func": "24H",
+                "data__atualiz": 1541548800000,
+                "data_ult_verific": 1541548800000,
+                "description": null,
+                "morad_entid_gest": "Rua Joaquim AntÃ³nio Aguiar, 19 - 2Âº, 1070-149 Lisboa",
+                "utilizador": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 13,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.624732299513338,
+                    41.147439008946094
+                ]
+            },
+            "properties": {
+                "objectid": 13,
+                "id": "14",
+                "designacao": "PalÃ¡cio de Cristal",
+                "toponimia": "Rua de Jorge Viterbo Ferreira",
+                "implantacao": "ESTR",
+                "concessionado": "S",
+                "entid_gest": "Porto Lazer",
+                "contac_entid_gest": "226199860",
+                "contac_parque": "937772614",
+                "data_inÃ­cio_contrato": 1528156800000,
+                "data_fim_contrato": null,
+                "nÂº_lug_ligeiros": 490,
+                "nÂº_lug_mob_reduz": null,
+                "nÂº_lug_moto_ciclo": null,
+                "nÂº_lug_veloc": null,
+                "nÂº_lug_pesad": 0,
+                "nÂº_lug_veic_eletr": null,
+                "hor_func": "24H",
+                "data__atualiz": 1541548800000,
+                "data_ult_verific": 1541548800000,
+                "description": null,
+                "morad_entid_gest": "PortoLazer - ServiÃ§os Centrais, Rua Bartolomeu Velho, 648, 4150-124 Porto",
+                "utilizador": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 14,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.603994420280586,
+                    41.146163216871166
+                ]
+            },
+            "properties": {
+                "objectid": 14,
+                "id": "15",
+                "designacao": "PraÃ§a dos Poveiros",
+                "toponimia": "PraÃ§a dos Poveiros",
+                "implantacao": "ESTR",
+                "concessionado": "S",
+                "entid_gest": "Porto Lazer",
+                "contac_entid_gest": "226199860",
+                "contac_parque": "937777909",
+                "data_inÃ­cio_contrato": 1528156800000,
+                "data_fim_contrato": null,
+                "nÂº_lug_ligeiros": 280,
+                "nÂº_lug_mob_reduz": null,
+                "nÂº_lug_moto_ciclo": null,
+                "nÂº_lug_veloc": null,
+                "nÂº_lug_pesad": 0,
+                "nÂº_lug_veic_eletr": null,
+                "hor_func": "24H",
+                "data__atualiz": 1541548800000,
+                "data_ult_verific": 1541548800000,
+                "description": null,
+                "morad_entid_gest": "PortoLazer - ServiÃ§os Centrais, Rua Bartolomeu Velho, 648, 4150-124 Porto",
+                "utilizador": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 15,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.68883719364602,
+                    41.16769457922392
+                ]
+            },
+            "properties": {
+                "objectid": 15,
+                "id": "16",
+                "designacao": "Castelo do Queijo",
+                "toponimia": "PraÃ§a de GonÃ§alves Zarco",
+                "implantacao": "ESTR",
+                "concessionado": "S",
+                "entid_gest": "Sabaportugal",
+                "contac_entid_gest": "223395150",
+                "contac_parque": "226102399",
+                "data_inÃ­cio_contrato": 1085961600000,
+                "data_fim_contrato": 1780185600000,
+                "nÂº_lug_ligeiros": 290,
+                "nÂº_lug_mob_reduz": null,
+                "nÂº_lug_moto_ciclo": null,
+                "nÂº_lug_veloc": null,
+                "nÂº_lug_pesad": 0,
+                "nÂº_lug_veic_eletr": null,
+                "hor_func": "24H",
+                "data__atualiz": 1541548800000,
+                "data_ult_verific": 1541548800000,
+                "description": null,
+                "morad_entid_gest": "Avenida dos Aliados, 54 - 3Âº, 4000-064 Porto",
+                "utilizador": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 16,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.627331350985292,
+                    41.15565864570223
+                ]
+            },
+            "properties": {
+                "objectid": 16,
+                "id": "17",
+                "designacao": "Adelino Amaro da Costa",
+                "toponimia": "RJDIN0",
+                "implantacao": "ESTR",
+                "concessionado": "S",
+                "entid_gest": "Bragaparques",
+                "contac_entid_gest": "253278170",
+                "contac_parque": "226068933",
+                "data_inÃ­cio_contrato": 1224633600000,
+                "data_fim_contrato": 1855785600000,
+                "nÂº_lug_ligeiros": 390,
+                "nÂº_lug_mob_reduz": 4,
+                "nÂº_lug_moto_ciclo": 0,
+                "nÂº_lug_veloc": 0,
+                "nÂº_lug_pesad": 0,
+                "nÂº_lug_veic_eletr": 0,
+                "hor_func": "24H",
+                "data__atualiz": 1541548800000,
+                "data_ult_verific": 1541548800000,
+                "description": "",
+                "morad_entid_gest": "Avenida da Liberdade, 459 -1Âº, 4710-251 Braga",
+                "utilizador": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 17,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.581913977458337,
+                    41.15555816129496
+                ]
+            },
+            "properties": {
+                "objectid": 17,
+                "id": "06",
+                "designacao": "Parque de S. Roque",
+                "toponimia": "Rua da FÃ¡brica A InvencÃ­vel",
+                "implantacao": "SUP",
+                "concessionado": "N",
+                "entid_gest": "CMP",
+                "contac_entid_gest": "222097000",
+                "contac_parque": "N/a",
+                "data_inÃ­cio_contrato": null,
+                "data_fim_contrato": null,
+                "nÂº_lug_ligeiros": 0,
+                "nÂº_lug_mob_reduz": 0,
+                "nÂº_lug_moto_ciclo": 0,
+                "nÂº_lug_veloc": 0,
+                "nÂº_lug_pesad": 39,
+                "nÂº_lug_veic_eletr": 0,
+                "hor_func": "24H",
+                "data__atualiz": 1541548800000,
+                "data_ult_verific": 1541548800000,
+                "description": "Apenas para veÃ­culos pesados de passageiros.",
+                "morad_entid_gest": "PraÃ§a do General Humberto Delgado, 4049-001 Porto",
+                "utilizador": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 18,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.678827449183148,
+                    41.17102951866555
+                ]
+            },
+            "properties": {
+                "objectid": 18,
+                "id": "18",
+                "designacao": "Parque da Cidade (entrada Norte)",
+                "toponimia": "Estrada da CircunvalaÃ§Ã£o",
+                "implantacao": "SUP",
+                "concessionado": "N",
+                "entid_gest": "CMP",
+                "contac_entid_gest": "222097000",
+                "contac_parque": "N/a",
+                "data_inÃ­cio_contrato": null,
+                "data_fim_contrato": null,
+                "nÂº_lug_ligeiros": null,
+                "nÂº_lug_mob_reduz": null,
+                "nÂº_lug_moto_ciclo": null,
+                "nÂº_lug_veloc": null,
+                "nÂº_lug_pesad": null,
+                "nÂº_lug_veic_eletr": null,
+                "hor_func": "24H",
+                "data__atualiz": 1541548800000,
+                "data_ult_verific": 1541548800000,
+                "description": "Municipal gratuito",
+                "morad_entid_gest": "PraÃ§a do General Humberto Delgado, 4049-001 Porto",
+                "utilizador": null
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 19,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.671701893382764,
+                    41.16580299420172
+                ]
+            },
+            "properties": {
+                "objectid": 19,
+                "id": "19",
+                "designacao": "Parque da Cidade (entrada Sul)",
+                "toponimia": "Avenida da Boavista",
+                "implantacao": "SUP",
+                "concessionado": "N",
+                "entid_gest": "CMP",
+                "contac_entid_gest": "222097000",
+                "contac_parque": "N/a",
+                "data_inÃ­cio_contrato": null,
+                "data_fim_contrato": null,
+                "nÂº_lug_ligeiros": null,
+                "nÂº_lug_mob_reduz": null,
+                "nÂº_lug_moto_ciclo": null,
+                "nÂº_lug_veloc": null,
+                "nÂº_lug_pesad": null,
+                "nÂº_lug_veic_eletr": null,
+                "hor_func": "24H",
+                "data__atualiz": 1541548800000,
+                "data_ult_verific": 1541548800000,
+                "description": "Municipal gratuito",
+                "morad_entid_gest": "PraÃ§a do General Humberto Delgado, 4049-001 Porto",
+                "utilizador": null
+            }
+        }
+    ]
+}
