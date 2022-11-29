@@ -1,6 +1,9 @@
+require 'json'
 class StreetsController < ApplicationController
 
   def new
+    @street = Street.new
+    # @streetbike = Street.new
   end
 
   def index
@@ -10,8 +13,18 @@ class StreetsController < ApplicationController
       {
         lat: street.latitude,
         lng: street.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { street: street })
+        info_window: render_to_string(partial: "info_window", locals: { street: street }),
+        image_url: helpers.asset_url("logo.png")
       }
     end
+    # @streetbike = Street.all
+    # @streetbike = @streetbike.geocoded.map do |street|
+    #   {
+    #     lat: street.latitude,
+    #     lng: street.longitude,
+    #     info_window: render_to_string(partial: "info_window", locals: { street: street }),
+    #     image_url: helpers.asset_url("logobike.png")
+    #   }
+    # end
   end
 end

@@ -6,9 +6,29 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 require "json"
+Street.destroy_all
+
 
 filepath = "data/parques.json"
+filepathbike = "data/parquesmotociclos.json"
 
 serialparque = File.read(filepath)
+serialparquemotors = File.read(filepathbike)
 
 @parques = JSON.parse(serialparque)
+@parquesmoto = JSON.parse(serialparquemotors)
+
+@parques['features'].each do |feature|
+  @street = Street.new
+  @street.latitude = feature['geometry']['coordinates'][1]
+  @street.longitude = feature['geometry']['coordinates'][0]
+  @street.save
+end
+
+# parques dos motociclos
+@parquesmoto['features'].each do |feature|
+  @streetbike = Street.new
+  @streetbike.latitude = feature['geometry']['coordinates'][1]
+  @streetbike.longitude = feature['geometry']['coordinates'][0]
+  @streetbike.save
+end
