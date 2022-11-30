@@ -21,10 +21,11 @@
   color: #828281;
 }
 
-.placeholder {
-  border-radius: 50%  ;
+.avatar {
+  vertical-align: middle;
   width: 150px;
-  margin: auto;
+  height: 150px;
+  border-radius: 50%;
 }
 
 
@@ -54,3 +55,9 @@
   background-color: #1E1F1F;
   color: #828281
 }
+
+
+.card-body {
+  align-self: center
+ }
+
