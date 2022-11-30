@@ -4,17 +4,13 @@
 }
 
 .mb-2 {
-  color: white
+  color: white;
 }
 
 .vh-100 {
   background-color: #1E1F1F;
 }
 
-.card {
-  border-radius: 5px;
-  background-color: #1E1F1F;
-}
 
 .personal_info {
   color: #03DA9F;
@@ -25,11 +21,36 @@
   color: #828281;
 }
 
-.user_img {
+.placeholder {
+  border-radius: 50%  ;
   width: 150px;
   margin: auto;
 }
 
+
 .card_total_info {
   text-align: center;
+}
+
+.edit_title {
+  text-align: -webkit-center;
+  color: white
+}
+
+.container_edit_items {
+  padding: 90px;
+}
+
+#btn_btn-link {
+  align-items: center;
+}
+
+.container_bottom {
+  justify-items: center;
+}
+
+
+.form-control {
+  background-color: #1E1F1F;
+  color: #828281
 }

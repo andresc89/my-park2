@@ -13,7 +13,7 @@
                 <li><a href="#">Features</a></li>
                 <li><a href="#">Pricing</a></li>
                   <% if user_signed_in? %>
-          <div> <%= current_user.first_name current_user.last_name %> </div>
+          <div> <%= current_user.first_name %> </div>
         <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "btn" %>
         <% else %>
           <%= link_to "Sign in", user_session_path, class: "btn" %>

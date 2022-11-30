@@ -1,7 +1,9 @@
 // Specific CSS for your home-page
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-
+#edit_user {
+  color: #03DA9F;
+}
 
 .mapboxgl-ctrl-geocoder--input {
   background-color: #24685D;
@@ -56,6 +58,8 @@ a {
   margin: 0 auto;
   padding: 0 3rem;
   z-index: 10;
+  background-color: #1E1F1F;
+
 }
 
 header {

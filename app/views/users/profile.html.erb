@@ -5,31 +5,25 @@
 
         <div class="card">
           <div class="card-body text-center">
-            <div class="user_img">
-            <%= image_tag "img placeholder"%>
+            <div class="placeholder" >
+            <%= image_tag "img_placeholder.jpg" %>
             </div>
           </div>
 
-          <div>
-            <p class="mb-2"> <%= @user.first_name %></p>
-          </div>
+          <div><p class="mb-2"> <%= @user.first_name %> <%= @user.last_name %></p></div>
+            <div class="mb-4 pb-2">
+              <h1 class="personal_info">Informação Pessoal</h1>
+              <p class= "details">Email:</p>
 
-          <div class="mb-4 pb-2">
-            <h1 class="personal_info">Informação Pessoal</h1>
-            <p class= "details">Email:</p>
-
-            <p class="mb-2"> <%= @user.email %></p>
-              <br>
-              <p class= "details">Morada:</p>
-              <p style="color: white">Display@daMorada.com</p>
-              <br>
+              <p class="mb-2"> <%= @user.email %></p>
+                <br>
+                <p class= "details">Morada:</p>
+                <p style="color: white">Display@daMorada.com</p>
+                <br>
+              <a class="btn" href="edit.html" >Edit</a>
             </div>
-              <br>
-
-          </div>
-            <a class="btn" href="edit.html" >Edit</a>
+                <br>
         </div>
-
       </div>
     </div>
   </div>
