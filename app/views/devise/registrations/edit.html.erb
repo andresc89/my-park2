@@ -20,10 +20,6 @@
                       hint: "leave it blank if you don't want to change it",
                       required: false,
                       input_html: { autocomplete: "new last-name" } %>
-          <%# <%= f.input :first_name,
-                      hint: "leave it blank if you don't want to change it",
-                      required: false,
-                      input_html: { autocomplete: "new first-name" } %>
           <%= f.input :password,
                       hint: "leave it blank if you don't want to change it",
                       required: false,
@@ -35,6 +31,7 @@
                       hint: "we need your current password to confirm your changes",
                       required: true,
                       input_html: { autocomplete: "current-password" } %>
+          <%= f.input :photo, as: :file %>
         </div>
 
         <div class="form-actions">
@@ -50,5 +47,6 @@
 
     </div>
   </div>
+
 </section>
 </div>

@@ -5,8 +5,8 @@
 
         <div class="card">
           <div class="card-body text-center">
-          <%# <img src="app/assets/images/person.png" alt="placeholder" class= "avatar" style= "border-radius: 50%"> %>
-            <div class="avatar" style= "border-radius: 50%"><%= image_tag "img_placeholder.jpg" %></div>
+          <%= cl_image_tag @user.photo.key, height: 150, width: 150, crop: :fill %>
+            <%# <div class="avatar" style= "border-radius: 50%"><%= image_tag "img_placeholder.jpg" %></div>
 
           </div>
 
