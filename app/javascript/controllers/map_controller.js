@@ -8,22 +8,27 @@ export default class extends Controller {
     markers: Array
   }
 
+
   connect() {
+
     mapboxgl.accessToken = this.apiKeyValue
-    this.start = [-8.693732, 41.183680];
+
+
 
     this.map = new mapboxgl.Map({
       container: this.element,
       style: "mapbox://styles/mapbox/dark-v11"
-        // style: "mapbox://styles/lateingame/clb28me8n003h14pprlv7piz9"
+      // style: "mapbox://styles/lateingame/clb28me8n003h14pprlv7piz9"
     })
     this.#addMarkersToMap()
-    if ( this.markersValue.length ) { this.#fitMapToMarkers() }
+    if (this.markersValue.length) { this.#fitMapToMarkers() }
 
     this.#fitMapToMarkers()
 
-    this.map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
-      mapboxgl: mapboxgl }))
+    this.map.addControl(new MapboxGeocoder({
+      accessToken: mapboxgl.accessToken,
+      mapboxgl: mapboxgl
+    }))
 
     // Add zoom and rotation controls to the map. WORKING
     this.map.addControl(new mapboxgl.NavigationControl());
@@ -41,30 +46,30 @@ export default class extends Controller {
         showUserHeading: true
       })
     );
+    this.getUsersLocation()
 
-      // TENTATIVA DE NAVEGAÇÃO SIMPLES
-      // this.map.addControl(
-      //   new MapboxDirections({
-      //   accessToken: mapboxgl.accessToken
-      //   }),
-      //   'top-left'
-      //   );
-
-      this.connectRoute()
   }
 
+  //       // TENTATIVA DE NAVEGAÇÃO COMPLEXA DO MAPBOX - USER ROUTING STARTS HERE
+  getUsersLocation() {
+    navigator.geolocation.getCurrentPosition((position) => {
+      this.start = [position.coords.longitude, position.coords.latitude]
+      // this.start = [10,10]
+      this.connectRoute()
+    })
+  }
 
-//       // TENTATIVA DE NAVEGAÇÃO COMPLEXA DO MAPBOX - USER ROUTING STARTS HERE
-
-//       // create a function to make a directions request
+  //       // create a function to make a directions request
   async getRoute(end) {
     // make a directions request using cycling profile
     // an arbitrary start will always be the same
     // only the end or destination will change
+
     const query = await fetch(
-      `https://api.mapbox.com/directions/v5/mapbox/driving-traffic/${this.start[0]},${this.start[1]};${end[0]},${end[1]}?steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`,
+      `https://api.mapbox.com/directions/v5/mapbox/driving-traffic/${this.start[0]},${this.start[1]};${end[0]},${end[1]}?geometries=geojson&access_token=${mapboxgl.accessToken}`,
       { method: 'GET' }
     );
+    console.log(query)
     const json = await query.json();
     const data = json.routes[0];
     const route = data.geometry.coordinates;
@@ -196,9 +201,9 @@ export default class extends Controller {
 
       // Pass the element as an argument to the new marker
       new mapboxgl.Marker(customMarker)
-      .setLngLat([marker.lng, marker.lat])
-      .setPopup(popup)
-      .addTo(this.map)
+        .setLngLat([marker.lng, marker.lat])
+        .setPopup(popup)
+        .addTo(this.map)
 
 
       // new mapboxgl.Marker()
@@ -235,7 +240,7 @@ export default class extends Controller {
   #fitMapToMarkers() {
     const bounds = new mapboxgl.LngLatBounds()
     this.markersValue.forEach(marker => {
-      bounds.extend([ marker.lng, marker.lat ])
+      bounds.extend([marker.lng, marker.lat])
     });
 
     this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 150 })
