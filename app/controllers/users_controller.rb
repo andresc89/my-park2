@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  def show
+
+  def profile
     @user = current_user
   end
 
@@ -10,5 +11,11 @@ class UsersController < ApplicationController
   # end
 
   def update
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit([:first_name, :last_name])
   end
 end
