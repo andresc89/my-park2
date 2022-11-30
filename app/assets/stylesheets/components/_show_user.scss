@@ -5,7 +5,31 @@
 
 .mb-2 {
   color: white
-
 }
 
+.vh-100 {
+  background-color: #1E1F1F;
+}
 
+.card {
+  border-radius: 5px;
+  background-color: #1E1F1F;
+}
+
+.personal_info {
+  color: #03DA9F;
+  font-size: 16px;
+}
+
+.details {
+  color: #828281;
+}
+
+.user_img {
+  width: 150px;
+  margin: auto;
+}
+
+.card_total_info {
+  text-align: center;
+}
