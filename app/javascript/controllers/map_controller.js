@@ -14,7 +14,6 @@ export default class extends Controller {
     mapboxgl.accessToken = this.apiKeyValue
 
 
-
     this.map = new mapboxgl.Map({
       container: this.element,
       style: "mapbox://styles/mapbox/dark-v11"
@@ -45,68 +44,66 @@ export default class extends Controller {
         // Draw an arrow next to the location dot to indicate which direction the device is heading.
         showUserHeading: true
       })
-    );
-    this.getUsersLocation()
+      );
+      this.getUsersLocation()
 
-  }
-
-  //       // TENTATIVA DE NAVEGAÇÃO COMPLEXA DO MAPBOX - USER ROUTING STARTS HERE
-  getUsersLocation() {
-    navigator.geolocation.getCurrentPosition((position) => {
-      this.start = [position.coords.longitude, position.coords.latitude]
-      // this.start = [10,10]
-      this.connectRoute()
-    })
-  }
-
-  //       // create a function to make a directions request
-  async getRoute(end) {
-    // make a directions request using cycling profile
-    // an arbitrary start will always be the same
-    // only the end or destination will change
-
-    const query = await fetch(
-      `https://api.mapbox.com/directions/v5/mapbox/driving-traffic/${this.start[0]},${this.start[1]};${end[0]},${end[1]}?steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`,
-      { method: 'GET' }
-    );
-    console.log(query)
-    const json = await query.json();
-    const data = json.routes[0];
-    const route = data.geometry.coordinates;
-    const geojson = {
-      type: 'Feature',
-      properties: {},
-      geometry: {
-        type: 'LineString',
-        coordinates: route
-      }
-    };
-    // if the route already exists on the map, we'll reset it using setData
-    if (this.map.getSource('route')) {
-      this.map.getSource('route').setData(geojson);
     }
-    // otherwise, we'll make a new request
-    else {
-      this.map.addLayer({
-        id: 'route',
-        type: 'line',
-        source: {
-          type: 'geojson',
-          data: geojson
-        },
-        layout: {
-          'line-join': 'round',
-          'line-cap': 'round'
-        },
-        paint: {
-          'line-color': '#3887be',
-          'line-width': 5,
-          'line-opacity': 0.75
+
+    //       // TENTATIVA DE NAVEGAÇÃO COMPLEXA DO MAPBOX - USER ROUTING STARTS HERE
+    getUsersLocation() {
+      navigator.geolocation.getCurrentPosition((position) => {
+        this.start = [position.coords.longitude, position.coords.latitude]
+        // this.start = [10,10]
+        this.connectRoute()
+      })
+    }
+
+    //       // create a function to make a directions request
+    async getRoute(end) {
+      // make a directions request using cycling profile
+      // an arbitrary start will always be the same
+      // only the end or destination will change
+
+      const query = await fetch(
+        `https://api.mapbox.com/directions/v5/mapbox/driving-traffic/${this.start[0]},${this.start[1]};${end[0]},${end[1]}?steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`,
+        { method: 'GET' }
+        );
+        const json = await query.json();
+        const data = json.routes[0];
+        const route = data.geometry.coordinates;
+        const geojson = {
+          type: 'Feature',
+          properties: {},
+          geometry: {
+            type: 'LineString',
+            coordinates: route
+          }
+        };
+        // if the route already exists on the map, we'll reset it using setData
+        if (this.map.getSource('route')) {
+          this.map.getSource('route').setData(geojson);
         }
-      });
-    }
-    // add turn instructions here at the end
-  }
+        // otherwise, we'll make a new request
+        else {
+          this.map.addLayer({
+            id: 'route',
+            type: 'line',
+            source: {
+              type: 'geojson',
+              data: geojson
+            },
+            layout: {
+              'line-join': 'round',
+              'line-cap': 'round'
+            },
+            paint: {
+              'line-color': '#3887be',
+              'line-width': 5,
+              'line-opacity': 0.75
+            }
+          });
+        }
+      }
 
   connectRoute() {
     this.map.on('load', () => {
