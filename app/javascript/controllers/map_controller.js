@@ -7,7 +7,7 @@ export default class extends Controller {
     apiKey: String,
     markers: Array
   }
-
+  static targets = [ "instructions", "map" ]
 
   connect() {
 
@@ -15,7 +15,7 @@ export default class extends Controller {
 
 
     this.map = new mapboxgl.Map({
-      container: this.element,
+      container: this.mapTarget,
       style: "mapbox://styles/mapbox/dark-v11"
       // style: "mapbox://styles/lateingame/clb28me8n003h14pprlv7piz9"
     })
@@ -47,6 +47,46 @@ export default class extends Controller {
       );
       this.getUsersLocation()
 
+  }
+
+  //       // TENTATIVA DE NAVEGAÇÃO COMPLEXA DO MAPBOX - USER ROUTING STARTS HERE
+  getUsersLocation() {
+    navigator.geolocation.getCurrentPosition((position) => {
+      this.start = [position.coords.longitude, position.coords.latitude]
+      // this.start = [10,10]
+      this.connectRoute()
+    })
+  }
+
+  //       // create a function to make a directions request
+  async getRoute(end) {
+    // make a directions request using cycling profile
+    // an arbitrary start will always be the same
+    // only the end or destination will change
+
+    const streetNameQuery = await fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${end[0]},${end[1]}.json?access_token=${mapboxgl.accessToken}`)
+    const streetNameJson = await streetNameQuery.json()
+    const streetName = streetNameJson.features[0].place_name
+    this.instructionsTarget.innerText = streetName
+
+    const query = await fetch(
+      `https://api.mapbox.com/directions/v5/mapbox/driving-traffic/${this.start[0]},${this.start[1]};${end[0]},${end[1]}?steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`,
+      { method: 'GET' }
+    );
+    const json = await query.json();
+    const data = json.routes[0];
+    const route = data.geometry.coordinates;
+    const geojson = {
+      type: 'Feature',
+      properties: {},
+      geometry: {
+        type: 'LineString',
+        coordinates: route
+      }
+    };
+    // if the route already exists on the map, we'll reset it using setData
+    if (this.map.getSource('route')) {
+      this.map.getSource('route').setData(geojson);
     }
 
     //       // TENTATIVA DE NAVEGAÇÃO COMPLEXA DO MAPBOX - USER ROUTING STARTS HERE
@@ -217,5 +257,6 @@ export default class extends Controller {
     });
 
     this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 150 })
+    }
   }
 }
