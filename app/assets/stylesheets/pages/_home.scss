@@ -1,14 +1,8 @@
 // Specific CSS for your home-page
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-.light {
-  --mainColor: #03DA9F; // COR DOS BOTOES
-  --hoverColor: #24685D; // COR HOVER BOTOES
-  --backgroundColor: #1E1F1F; // COR DE FUNDO
-  --darkOne: #FFFFFF; // TITULO PRINCIPAL
-  --darkTwo: #03DA9F; // COR DAS LETRAS DO LOGO
-  --lightOne: #828281; // TEXTO SECUNDARIO
-  --lightTwo: #FFFFFF; // COR DO TEXT DOS BOTOES
+#edit_user {
+  color: #03DA9F;
 }
 
 .mapboxgl-ctrl-geocoder--input {
@@ -19,15 +13,6 @@
 .mapboxgl-ctrl-geocoder {
   // color: white;
   background-color: #24685D;
-}
-.dark {
-  --mainColor: #64bcf4;
-  --hoverColor: #5bacdf;
-  --backgroundColor: #192e3a;
-  --darkOne: #f3f3f3;
-  --darkTwo: #fff;
-  --lightOne: #ccc;
-  --lightTwo: #e7e3e3;
 }
 
 *,
@@ -75,6 +60,8 @@ a {
   margin: 0 auto;
   padding: 0 3rem;
   z-index: 10;
+  background-color: #1E1F1F;
+
 }
 
 header {
