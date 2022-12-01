@@ -11,7 +11,7 @@
             <div class="links">
               <ul>
                 <li><a href="#">Features</a></li>
-                <li><a href="#">Pricing</a></li>
+                <li><a href="/users/profile">My Profile</a></li>
                   <% if user_signed_in? %>
           <div> <%= current_user.first_name %> </div>
         <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "btn" %>
