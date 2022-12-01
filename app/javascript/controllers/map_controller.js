@@ -7,7 +7,7 @@ export default class extends Controller {
     apiKey: String,
     markers: Array
   }
-
+  static targets = [ "instructions", "map" ]
 
   connect() {
 
@@ -16,7 +16,7 @@ export default class extends Controller {
 
 
     this.map = new mapboxgl.Map({
-      container: this.element,
+      container: this.mapTarget,
       style: "mapbox://styles/mapbox/dark-v11"
       // style: "mapbox://styles/lateingame/clb28me8n003h14pprlv7piz9"
     })
@@ -65,11 +65,15 @@ export default class extends Controller {
     // an arbitrary start will always be the same
     // only the end or destination will change
 
+    const streetNameQuery = await fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${end[0]},${end[1]}.json?access_token=${mapboxgl.accessToken}`)
+    const streetNameJson = await streetNameQuery.json()
+    const streetName = streetNameJson.features[0].place_name
+    this.instructionsTarget.innerText = streetName
+
     const query = await fetch(
       `https://api.mapbox.com/directions/v5/mapbox/driving-traffic/${this.start[0]},${this.start[1]};${end[0]},${end[1]}?steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`,
       { method: 'GET' }
     );
-    console.log(query)
     const json = await query.json();
     const data = json.routes[0];
     const route = data.geometry.coordinates;
