@@ -1,0 +1,31 @@
+<section class="vh-100 light">
+  <div class="container py-5 h-100">
+    <div class=" card_container_profile row d-flex justify-content-center align-items-center h-100">
+      <div class="card_total_info">
+
+        <div class="card">
+          <div class="card-body text-center">
+          <%= cl_image_tag @user.photo.key, height: 150, width: 150, crop: :fill %>
+            <%# <div class="avatar" style= "border-radius: 50%"><%= image_tag "img_placeholder.jpg" %></div>
+
+          </div>
+
+          <div><p class="mb-2"> <%= @user.first_name %> <%= @user.last_name %></p></div>
+            <div class="mb-4 pb-2">
+              <h1 class="personal_info">Personal Info</h1>
+              <p class= "details">Email:</p>
+
+              <p class="mb-2"> <%= @user.email %></p>
+                <br>
+                <p class= "details">Address:</p>
+                <p style="color: white">Av. Serpa Pinto 311, 4450-718 Matosinhos</p>
+                <br>
+              <a class="btn" href="edit.html" >Edit</a>
+            </div>
+                <br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
