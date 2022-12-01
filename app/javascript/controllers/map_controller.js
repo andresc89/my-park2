@@ -14,6 +14,7 @@ export default class extends Controller {
     mapboxgl.accessToken = this.apiKeyValue
 
 
+
     this.map = new mapboxgl.Map({
       container: this.mapTarget,
       style: "mapbox://styles/mapbox/dark-v11"
@@ -44,8 +45,8 @@ export default class extends Controller {
         // Draw an arrow next to the location dot to indicate which direction the device is heading.
         showUserHeading: true
       })
-      );
-      this.getUsersLocation()
+    );
+    this.getUsersLocation()
 
   }
 
@@ -67,9 +68,8 @@ export default class extends Controller {
     const streetNameQuery = await fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${end[0]},${end[1]}.json?access_token=${mapboxgl.accessToken}`)
     const streetNameJson = await streetNameQuery.json()
     const streetName = streetNameJson.features[0].place_name
-    // const streetTest = streetNameJson.features[0]
-    // console.log(streetTest)
     this.instructionsTarget.innerText = streetName
+
 
     const query = await fetch(
       `https://api.mapbox.com/directions/v5/mapbox/driving-traffic/${this.start[0]},${this.start[1]};${end[0]},${end[1]}?steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`,
@@ -90,62 +90,28 @@ export default class extends Controller {
     if (this.map.getSource('route')) {
       this.map.getSource('route').setData(geojson);
     }
-
-    //       // TENTATIVA DE NAVEGAÇÃO COMPLEXA DO MAPBOX - USER ROUTING STARTS HERE
-    getUsersLocation() {
-      navigator.geolocation.getCurrentPosition((position) => {
-        this.start = [position.coords.longitude, position.coords.latitude]
-        // this.start = [10,10]
-        this.connectRoute()
-      })
+    // otherwise, we'll make a new request
+    else {
+      this.map.addLayer({
+        id: 'route',
+        type: 'line',
+        source: {
+          type: 'geojson',
+          data: geojson
+        },
+        layout: {
+          'line-join': 'round',
+          'line-cap': 'round'
+        },
+        paint: {
+          'line-color': '#3887be',
+          'line-width': 5,
+          'line-opacity': 0.75
+        }
+      });
     }
-
-    //       // create a function to make a directions request
-    async getRoute(end) {
-      // make a directions request using cycling profile
-      // an arbitrary start will always be the same
-      // only the end or destination will change
-
-      const query = await fetch(
-        `https://api.mapbox.com/directions/v5/mapbox/driving-traffic/${this.start[0]},${this.start[1]};${end[0]},${end[1]}?steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`,
-        { method: 'GET' }
-        );
-        const json = await query.json();
-        const data = json.routes[0];
-        const route = data.geometry.coordinates;
-        const geojson = {
-          type: 'Feature',
-          properties: {},
-          geometry: {
-            type: 'LineString',
-            coordinates: route
-          }
-        };
-        // if the route already exists on the map, we'll reset it using setData
-        if (this.map.getSource('route')) {
-          this.map.getSource('route').setData(geojson);
-        }
-        // otherwise, we'll make a new request
-        else {
-          this.map.addLayer({
-            id: 'route',
-            type: 'line',
-            source: {
-              type: 'geojson',
-              data: geojson
-            },
-            layout: {
-              'line-join': 'round',
-              'line-cap': 'round'
-            },
-            paint: {
-              'line-color': '#3887be',
-              'line-width': 5,
-              'line-opacity': 0.75
-            }
-          });
-        }
-      }
+    // add turn instructions here at the end
+  }
 
   connectRoute() {
     this.map.on('load', () => {
@@ -179,7 +145,7 @@ export default class extends Controller {
         }
       });
       // this is where the code from the next step will go
-      this.map.on('touchend', (event) => {
+      this.map.on('dblclick', (event) => {
         const coords = Object.keys(event.lngLat).map((key) => event.lngLat[key]);
         const end = {
           type: 'FeatureCollection',
@@ -229,7 +195,7 @@ export default class extends Controller {
 
   #addMarkersToMap() {
     this.markersValue.forEach((marker) => {
-      // const popup = new mapboxgl.Popup().setHTML(marker.info_window)
+      const popup = new mapboxgl.Popup().setHTML(marker.info_window)
       // Create a HTML element for your custom marker
       const customMarker = document.createElement("div")
       customMarker.className = "marker"
@@ -241,11 +207,8 @@ export default class extends Controller {
       // Pass the element as an argument to the new marker
       new mapboxgl.Marker(customMarker)
         .setLngLat([marker.lng, marker.lat])
-        // .setPopup(popup)
+        .setPopup(popup)
         .addTo(this.map)
-        .getElement().addEventListener('click', () => {
-          this.instructionsTarget.innerHTML += marker.info_window
-        });
 
 
       // new mapboxgl.Marker()
@@ -262,6 +225,5 @@ export default class extends Controller {
     });
 
     this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 150 })
-    }
   }
 }
