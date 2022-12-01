@@ -1,12 +1,16 @@
 #instructions {
 
   height: 160px;
-
   width: 35%;
-  top: 150px;
+  top: 0px;
   bottom: 0px;
-  padding: 20px;
-  background-color: #fff;
+  padding: 0px;
+  background-color: #828281;
+  background: #828281;
   overflow-y: scroll;
   font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
 }

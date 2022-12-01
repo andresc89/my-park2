@@ -8,7 +8,6 @@
 require "json"
 Street.destroy_all
 
-
 filepath = "data/parques.json"
 filepathbike = "data/parquesmotociclos.json"
 

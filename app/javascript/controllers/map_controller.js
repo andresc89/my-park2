@@ -7,7 +7,7 @@ export default class extends Controller {
     apiKey: String,
     markers: Array
   }
-  static targets = [ "instructions", "map" ]
+  static targets = [ "instructions", "map"]
 
   connect() {
 
@@ -68,6 +68,8 @@ export default class extends Controller {
     const streetNameQuery = await fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${end[0]},${end[1]}.json?access_token=${mapboxgl.accessToken}`)
     const streetNameJson = await streetNameQuery.json()
     const streetName = streetNameJson.features[0].place_name
+    // const streetTest = streetNameJson.features[0]
+    // console.log(streetTest)
     this.instructionsTarget.innerText = streetName
 
     const query = await fetch(
@@ -144,7 +146,7 @@ export default class extends Controller {
         }
       });
       // this is where the code from the next step will go
-      this.map.on('dblclick', (event) => {
+      this.map.on('touchend', (event) => {
         const coords = Object.keys(event.lngLat).map((key) => event.lngLat[key]);
         const end = {
           type: 'FeatureCollection',
@@ -194,7 +196,7 @@ export default class extends Controller {
 
   #addMarkersToMap() {
     this.markersValue.forEach((marker) => {
-      const popup = new mapboxgl.Popup().setHTML(marker.info_window)
+      // const popup = new mapboxgl.Popup().setHTML(marker.info_window)
       // Create a HTML element for your custom marker
       const customMarker = document.createElement("div")
       customMarker.className = "marker"
@@ -206,8 +208,11 @@ export default class extends Controller {
       // Pass the element as an argument to the new marker
       new mapboxgl.Marker(customMarker)
         .setLngLat([marker.lng, marker.lat])
-        .setPopup(popup)
+        // .setPopup(popup)
         .addTo(this.map)
+        .getElement().addEventListener('click', () => {
+          this.instructionsTarget.innerHTML += marker.info_window
+        });
 
 
       // new mapboxgl.Marker()
