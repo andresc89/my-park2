@@ -1,18 +1,32 @@
 // Specific CSS for your home-page
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+html {
+  margin: 0px !important;
+}
+
 #edit_user {
   color: #03DA9F;
 }
 
 .mapboxgl-ctrl-geocoder--input {
-  background-color: #24685D;
-  color: #1E1F1F;
+  background-color:rgba(130,130,129, 0.3);
+  color: white;
+
+}
+
+.map {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.mapboxgl-ctrl-top-right {
+  right: center !important;
 }
 
 .mapboxgl-ctrl-geocoder {
   // color: white;
-  background-color: #24685D;
+  background-color: rgba(130,130,129, 0.3);
 }
 
 *,
@@ -53,6 +67,8 @@ a {
   justify-content: space-between;
 }
 
+
+
 .container {
   position: relative;
   max-width: 81rem;
@@ -61,6 +77,7 @@ a {
   padding: 0 3rem;
   z-index: 10;
   background-color: #1E1F1F;
+  display: grid;
 
 }
 
