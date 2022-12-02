@@ -13,7 +13,7 @@ class StreetsController < ApplicationController
       {
         lat: street.latitude,
         lng: street.longitude,
-        # info_window: render_to_string(partial: "info_window", locals: { street: street }),
+        info_window: render_to_string(partial: "info_window", locals: { street: street }),
         image_url: helpers.asset_url("logowhite.png")
       }
     end
