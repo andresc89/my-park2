@@ -7,11 +7,12 @@
 
 .mapboxgl-ctrl-geocoder--input {
   background-color: #24685D;
-  color: #FFFFFF;
+  color: #1E1F1F;
 }
 
 .mapboxgl-ctrl-geocoder {
-  color: white;
+  // color: white;
+  background-color: #24685D;
 }
 
 *,
@@ -24,6 +25,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  position: relative;
 }
 
 .stop-scrolling {
