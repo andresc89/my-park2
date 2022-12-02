@@ -11,7 +11,9 @@ export default class extends Controller {
 
   connect() {
 
-   this.markersValue.forEach((marker) => {
+
+    
+    this.markersValue.forEach((marker) => {
       this.btnsTarget.insertAdjacentHTML("beforeend", marker.counter_btn)
       });
 
