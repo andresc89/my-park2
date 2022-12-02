@@ -10,9 +10,10 @@ export default class extends Controller {
   static targets = [ "instructions", "map", "btns"] // RETIRAR "btns" PARA REMOVER BOTÕES INFINITOS!
 
   connect() {
-    this.markersValue.forEach((marker) => {
+
+   this.markersValue.forEach((marker) => {
       this.btnsTarget.insertAdjacentHTML("beforeend", marker.counter_btn)
-    })
+      });
 
     mapboxgl.accessToken = this.apiKeyValue
 
@@ -72,6 +73,7 @@ export default class extends Controller {
     const streetNameJson = await streetNameQuery.json()
     const streetName = streetNameJson.features[0].place_name
     this.instructionsTarget.innerText = streetName
+
 
 
     const query = await fetch(
