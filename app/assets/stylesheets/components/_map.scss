@@ -54,7 +54,10 @@
 //   }
 // }
 
+.main_map {
+  position: relative !important;
+}
 
-.mapboxgl-canvas {
-  overflow: hidden !important;
+#instructions {
+  position: absolute !important;
 }
