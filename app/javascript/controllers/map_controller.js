@@ -203,6 +203,9 @@ export default class extends Controller {
       customMarker.style.backgroundSize = "contain"
       customMarker.style.width = "25px"
       customMarker.style.height = "25px"
+      // use GetElement to get HTML Element from marker and add event
+      marker.getElement().addEventListener('click', () => {
+        alert("Clicked");
 
       // Pass the element as an argument to the new marker
       new mapboxgl.Marker(customMarker)
@@ -215,15 +218,15 @@ export default class extends Controller {
       //   .setLngLat([ marker.lng, marker.lat ])
       //   .setPopup(popup)
       //   .addTo(this.map)
-    })
 
-  }
-  #fitMapToMarkers() {
-    const bounds = new mapboxgl.LngLatBounds()
-    this.markersValue.forEach(marker => {
-      bounds.extend([marker.lng, marker.lat])
-    });
 
-    this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 150 })
+      #fitMapToMarkers() {
+        const bounds = new mapboxgl.LngLatBounds()
+        this.markersValue.forEach(marker => {
+          bounds.extend([marker.lng, marker.lat])
+        });
+
+      }
+        this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 150 })
   }
 }
