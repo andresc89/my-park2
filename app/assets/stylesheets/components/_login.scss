@@ -1,0 +1,42 @@
+.container_login {
+  // background-color: #1E1F1F !important;
+  color: #03DA9F;
+  max-height: max-content;
+}
+.h2 {
+  color: white !important
+}
+
+html, body {
+  height: 100%;
+  margin: 10px;
+  background-color: #1E1F1F !important;
+  position: relative;
+
+ }
+
+.full-height {
+  height: 100%;
+  background-color: #1E1F1F !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_container_profile {
+
+  border-width: 6px;
+  border-style: solid;
+  border-color: #03DA9F;
+  padding: 40px;
+  width: 350px;
+  height: 500px !important;
+  margin: 0 auto;
+ }
+
+ .vertical-center {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
