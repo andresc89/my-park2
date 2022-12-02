@@ -6,13 +6,18 @@
 }
 
 .mapboxgl-ctrl-geocoder--input {
-  background-color: #24685D;
-  color: #1E1F1F;
+  background-color:rgba(130,130,129, 0.3);
+  color: white;
+
+}
+
+.mapboxgl-ctrl-top-right {
+  right: 33% !important;
 }
 
 .mapboxgl-ctrl-geocoder {
   // color: white;
-  background-color: #24685D;
+  background-color: rgba(130,130,129, 0.3);
 }
 
 *,
@@ -389,6 +394,3 @@ header .container {
     font-size: 0.8rem;
   }
 }
-
-
-
