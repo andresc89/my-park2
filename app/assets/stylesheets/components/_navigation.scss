@@ -1,12 +1,19 @@
 #instructions {
 
-  height: 160px;
-
-  width: 35%;
-  top: 150px;
+  height: 120px;
+  width: 100%;
+  //top: 0px;
   bottom: 0px;
-  padding: 20px;
-  background-color: #fff;
-  overflow-y: scroll;
+  padding: 0px;
+  background-color: rgba(130,130,129, 0.3);
+  //background: #828281;
+  color: white;
+  //overflow-y: scroll;
   font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  //opacity: 30%;
+  border-radius: 15px;
 }
