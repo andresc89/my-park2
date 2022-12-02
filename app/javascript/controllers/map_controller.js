@@ -7,7 +7,7 @@ export default class extends Controller {
     apiKey: String,
     markers: Array
   }
-  static targets = [ "instructions", "map", "btns"]
+  static targets = [ "instructions", "map", "btns"] // RETIRAR "btns" PARA REMOVER BOTÕES INFINITOS!
 
   connect() {
     this.markersValue.forEach((marker) => {
