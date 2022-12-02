@@ -1,0 +1,1535 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "id": 1682,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.609905125853508,
+                    41.15805393954333
+                ]
+            },
+            "properties": {
+                "objectid": 1682,
+                "toponimo": "RCAMO0",
+                "n_lugar": 6,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1739,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.593996809704949,
+                    41.15013637563147
+                ]
+            },
+            "properties": {
+                "objectid": 1739,
+                "toponimo": "RACAR1",
+                "n_lugar": 15,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1715,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.606712317930006,
+                    41.142303173407704
+                ]
+            },
+            "properties": {
+                "objectid": 1715,
+                "toponimo": "RAGAM0",
+                "n_lugar": 10,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1714,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.678630136083079,
+                    41.170377060323304
+                ]
+            },
+            "properties": {
+                "objectid": 1714,
+                "toponimo": "ECIRC0",
+                "n_lugar": 8,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1718,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.609005885492136,
+                    41.15682713594212
+                ]
+            },
+            "properties": {
+                "objectid": 1718,
+                "toponimo": "ROLIV3",
+                "n_lugar": 5,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1719,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.641304855923211,
+                    41.164583215282825
+                ]
+            },
+            "properties": {
+                "objectid": 1719,
+                "toponimo": "RJDEU0",
+                "n_lugar": 10,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1720,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.63996621065747,
+                    41.163614934596566
+                ]
+            },
+            "properties": {
+                "objectid": 1720,
+                "toponimo": "RJDEU0",
+                "n_lugar": 10,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1721,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.671774645165222,
+                    41.16573156469019
+                ]
+            },
+            "properties": {
+                "objectid": 1721,
+                "toponimo": "APARQ0",
+                "n_lugar": 5,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1722,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.643252102083665,
+                    41.15435746028586
+                ]
+            },
+            "properties": {
+                "objectid": 1722,
+                "toponimo": "RCALE0",
+                "n_lugar": 4,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1723,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.609899878275893,
+                    41.15039016970409
+                ]
+            },
+            "properties": {
+                "objectid": 1723,
+                "toponimo": "RESTE0",
+                "n_lugar": 3,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1724,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.609746879524037,
+                    41.150314869095425
+                ]
+            },
+            "properties": {
+                "objectid": 1724,
+                "toponimo": "RESTE0",
+                "n_lugar": 3,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1727,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.625985884807958,
+                    41.14875554522713
+                ]
+            },
+            "properties": {
+                "objectid": 1727,
+                "toponimo": "RDMSE0",
+                "n_lugar": 11,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1728,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.624441739150155,
+                    41.147691256426846
+                ]
+            },
+            "properties": {
+                "objectid": 1728,
+                "toponimo": "RJVFE0",
+                "n_lugar": 5,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1730,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.614462927137447,
+                    41.141415638594076
+                ]
+            },
+            "properties": {
+                "objectid": 1730,
+                "toponimo": "RMSIL0",
+                "n_lugar": 14,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1731,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.613000444831936,
+                    41.148208276755085
+                ]
+            },
+            "properties": {
+                "objectid": 1731,
+                "toponimo": "PDFLE0",
+                "n_lugar": 8,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1732,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.669340978564948,
+                    41.16330571371665
+                ]
+            },
+            "properties": {
+                "objectid": 1732,
+                "toponimo": "RPLEA0",
+                "n_lugar": 50,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1733,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.66618338945183,
+                    41.15953565878438
+                ]
+            },
+            "properties": {
+                "objectid": 1733,
+                "toponimo": "PDAQU0",
+                "n_lugar": 8,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1737,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.617889467497005,
+                    41.151539720463354
+                ]
+            },
+            "properties": {
+                "objectid": 1737,
+                "toponimo": "RBREI0",
+                "n_lugar": 6,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1736,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.61556274994732,
+                    41.15266944771711
+                ]
+            },
+            "properties": {
+                "objectid": 1736,
+                "toponimo": "RBRAG0",
+                "n_lugar": 12,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1738,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.63221603403613,
+                    41.15852332913075
+                ]
+            },
+            "properties": {
+                "objectid": 1738,
+                "toponimo": "ABOAV0",
+                "n_lugar": 7,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1735,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.614371685707132,
+                    41.15433091653016
+                ]
+            },
+            "properties": {
+                "objectid": 1735,
+                "toponimo": "RACAB0",
+                "n_lugar": 6,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1726,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.60402967242309,
+                    41.14824012486392
+                ]
+            },
+            "properties": {
+                "objectid": 1726,
+                "toponimo": "RALEG1",
+                "n_lugar": 11,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 2157,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.602976964125773,
+                    41.159911290125685
+                ]
+            },
+            "properties": {
+                "objectid": 2157,
+                "toponimo": "RLCOE0",
+                "n_lugar": 10,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 2159,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.67187061631662,
+                    41.15600659462307
+                ]
+            },
+            "properties": {
+                "objectid": 2159,
+                "toponimo": "RSFXA0",
+                "n_lugar": 10,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1741,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.603015329000078,
+                    41.154744081988845
+                ]
+            },
+            "properties": {
+                "objectid": 1741,
+                "toponimo": "RALEG1",
+                "n_lugar": 6,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1743,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.643424320972787,
+                    41.16312584054397
+                ]
+            },
+            "properties": {
+                "objectid": 1743,
+                "toponimo": "ROPJA0",
+                "n_lugar": 6,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 2155,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.600072133658093,
+                    41.150919618727876
+                ]
+            },
+            "properties": {
+                "objectid": 2155,
+                "toponimo": "RSPOU0",
+                "n_lugar": 22,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 2158,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.654187163575992,
+                    41.15712515813899
+                ]
+            },
+            "properties": {
+                "objectid": 2158,
+                "toponimo": "RPACR0",
+                "n_lugar": 6,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1752,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.608460459131269,
+                    41.1476354873261
+                ]
+            },
+            "properties": {
+                "objectid": 1752,
+                "toponimo": "RSBAN0",
+                "n_lugar": 16,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1748,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.602550274694574,
+                    41.14564909383558
+                ]
+            },
+            "properties": {
+                "objectid": 1748,
+                "toponimo": "ARFRE0",
+                "n_lugar": 4,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1740,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.600311192552038,
+                    41.145759986142245
+                ]
+            },
+            "properties": {
+                "objectid": 1740,
+                "toponimo": "ARFRE0",
+                "n_lugar": 10,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1744,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.629507029443845,
+                    41.15628573432945
+                ]
+            },
+            "properties": {
+                "objectid": 1744,
+                "toponimo": "PBSUC0",
+                "n_lugar": 14,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1742,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.639536603204705,
+                    41.15850061097967
+                ]
+            },
+            "properties": {
+                "objectid": 1742,
+                "toponimo": "RAPAT0",
+                "n_lugar": 18,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1745,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.631182737615081,
+                    41.156863392122865
+                ]
+            },
+            "properties": {
+                "objectid": 1745,
+                "toponimo": "RMEDI0",
+                "n_lugar": 8,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1746,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.627723429937115,
+                    41.155829257301185
+                ]
+            },
+            "properties": {
+                "objectid": 1746,
+                "toponimo": "RJDIN0",
+                "n_lugar": 10,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1747,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.627184590024807,
+                    41.152221850019174
+                ]
+            },
+            "properties": {
+                "objectid": 1747,
+                "toponimo": "PGALI0",
+                "n_lugar": 6,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1749,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.60532223588629,
+                    41.161948925424525
+                ]
+            },
+            "properties": {
+                "objectid": 1749,
+                "toponimo": "RCONS0",
+                "n_lugar": 15,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1751,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.604724554073016,
+                    41.15315910283997
+                ]
+            },
+            "properties": {
+                "objectid": 1751,
+                "toponimo": "RSCAT0",
+                "n_lugar": 6,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1753,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.608001160250064,
+                    41.14838096358825
+                ]
+            },
+            "properties": {
+                "objectid": 1753,
+                "toponimo": "RSBAN0",
+                "n_lugar": 6,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1754,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.611138291562124,
+                    41.15050649737887
+                ]
+            },
+            "properties": {
+                "objectid": 1754,
+                "toponimo": "RDRJO0",
+                "n_lugar": 6,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1750,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.604615088527614,
+                    41.15801389433659
+                ]
+            },
+            "properties": {
+                "objectid": 1750,
+                "toponimo": "RSCAT0",
+                "n_lugar": 10,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1695,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.683105061733597,
+                    41.15870646267876
+                ]
+            },
+            "properties": {
+                "objectid": 1695,
+                "toponimo": "ABRAS0",
+                "n_lugar": 14,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1755,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.610405724971884,
+                    41.15028064516198
+                ]
+            },
+            "properties": {
+                "objectid": 1755,
+                "toponimo": "RDALG0",
+                "n_lugar": 4,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 2156,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.591493488991224,
+                    41.162907742146665
+                ]
+            },
+            "properties": {
+                "objectid": 2156,
+                "toponimo": "PFSCA0",
+                "n_lugar": 10,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1683,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.609978077705456,
+                    41.15533828876952
+                ]
+            },
+            "properties": {
+                "objectid": 1683,
+                "toponimo": "RCAMO0",
+                "n_lugar": 6,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1729,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.605947745663082,
+                    41.15916175941007
+                ]
+            },
+            "properties": {
+                "objectid": 1729,
+                "toponimo": "RJORA0",
+                "n_lugar": 5,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 4558,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.609838027248946,
+                    41.15356227024309
+                ]
+            },
+            "properties": {
+                "objectid": 4558,
+                "toponimo": "RGCRI0",
+                "n_lugar": 5,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1684,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.611724754934455,
+                    41.15682998373316
+                ]
+            },
+            "properties": {
+                "objectid": 1684,
+                "toponimo": "RPARA0",
+                "n_lugar": 6,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1685,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.611065894310782,
+                    41.149735523500134
+                ]
+            },
+            "properties": {
+                "objectid": 1685,
+                "toponimo": "PGHDE0",
+                "n_lugar": 6,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1688,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.61053606912392,
+                    41.15145792558335
+                ]
+            },
+            "properties": {
+                "objectid": 1688,
+                "toponimo": "RHMAN0",
+                "n_lugar": 5,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1687,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.607555621614578,
+                    41.1505702965281
+                ]
+            },
+            "properties": {
+                "objectid": 1687,
+                "toponimo": "RBOLH0",
+                "n_lugar": 6,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1689,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.608115811917182,
+                    41.1574448707382
+                ]
+            },
+            "properties": {
+                "objectid": 1689,
+                "toponimo": "RPARA0",
+                "n_lugar": 6,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1691,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.625063856793341,
+                    41.157157082858845
+                ]
+            },
+            "properties": {
+                "objectid": 1691,
+                "toponimo": "ABOAV0",
+                "n_lugar": 5,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1692,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.609220747690781,
+                    41.154717906233365
+                ]
+            },
+            "properties": {
+                "objectid": 1692,
+                "toponimo": "RDAMA1",
+                "n_lugar": 6,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1693,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.609508652646115,
+                    41.14670204567553
+                ]
+            },
+            "properties": {
+                "objectid": 1693,
+                "toponimo": "RSBAN0",
+                "n_lugar": 5,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 3758,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.61341524107731,
+                    41.163039419372915
+                ]
+            },
+            "properties": {
+                "objectid": 3758,
+                "toponimo": "RCONS0",
+                "n_lugar": 5,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 3755,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.615420531243517,
+                    41.14622010901692
+                ]
+            },
+            "properties": {
+                "objectid": 3755,
+                "toponimo": "RDFSI0",
+                "n_lugar": 18,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 3756,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.615648734256887,
+                    41.14276923730265
+                ]
+            },
+            "properties": {
+                "objectid": 3756,
+                "toponimo": "RBELO0",
+                "n_lugar": 9,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 3757,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.638475576017424,
+                    41.15309322352281
+                ]
+            },
+            "properties": {
+                "objectid": 3757,
+                "toponimo": "RCALE0",
+                "n_lugar": 5,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 4556,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.616544515193276,
+                    41.14451657716085
+                ]
+            },
+            "properties": {
+                "objectid": 4556,
+                "toponimo": "CMPAT0",
+                "n_lugar": 10,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 4557,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.609750190145784,
+                    41.153560949095414
+                ]
+            },
+            "properties": {
+                "objectid": 4557,
+                "toponimo": "RGCRI0",
+                "n_lugar": 5,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 4957,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.610256508569199,
+                    41.15356773649485
+                ]
+            },
+            "properties": {
+                "objectid": 4957,
+                "toponimo": "RGCRI0",
+                "n_lugar": 5,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 4559,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.61017639383522,
+                    41.153568222676476
+                ]
+            },
+            "properties": {
+                "objectid": 4559,
+                "toponimo": "RGCRI0",
+                "n_lugar": 2,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 4560,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.594775977674324,
+                    41.169499618276774
+                ]
+            },
+            "properties": {
+                "objectid": 4560,
+                "toponimo": "RALES0",
+                "n_lugar": 11,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 5357,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.601675712824505,
+                    41.150982769516
+                ]
+            },
+            "properties": {
+                "objectid": 5357,
+                "toponimo": "RFIRM0",
+                "n_lugar": 5,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 5757,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.598421579997746,
+                    41.14641888121127
+                ]
+            },
+            "properties": {
+                "objectid": 5757,
+                "toponimo": "RDTER0",
+                "n_lugar": null,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1696,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.687819021732818,
+                    41.17178727845324
+                ]
+            },
+            "properties": {
+                "objectid": 1696,
+                "toponimo": "VCQUE0",
+                "n_lugar": 6,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1697,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.622256898698403,
+                    41.15674542636047
+                ]
+            },
+            "properties": {
+                "objectid": 1697,
+                "toponimo": "RBOAV0",
+                "n_lugar": 6,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1699,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.6115915921017,
+                    41.149215777900515
+                ]
+            },
+            "properties": {
+                "objectid": 1699,
+                "toponimo": "RRORT0",
+                "n_lugar": 6,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1700,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.620897733105073,
+                    41.14995323187474
+                ]
+            },
+            "properties": {
+                "objectid": 1700,
+                "toponimo": "RROSA0",
+                "n_lugar": 6,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1701,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.607201390663615,
+                    41.147062617306084
+                ]
+            },
+            "properties": {
+                "objectid": 1701,
+                "toponimo": "RPMAN0",
+                "n_lugar": 2,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1702,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.605470723190468,
+                    41.16070838248866
+                ]
+            },
+            "properties": {
+                "objectid": 1702,
+                "toponimo": "RJPRI0",
+                "n_lugar": 4,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1703,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.609888521622258,
+                    41.15871959917836
+                ]
+            },
+            "properties": {
+                "objectid": 1703,
+                "toponimo": "RCAMO0",
+                "n_lugar": 6,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1704,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.650904064600203,
+                    41.1510521133201
+                ]
+            },
+            "properties": {
+                "objectid": 1704,
+                "toponimo": "RBMAC0",
+                "n_lugar": 5,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1705,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.604735345792173,
+                    41.165470022364616
+                ]
+            },
+            "properties": {
+                "objectid": 1705,
+                "toponimo": "RBOLA0",
+                "n_lugar": 5,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1707,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.600872598956743,
+                    41.160087603371935
+                ]
+            },
+            "properties": {
+                "objectid": 1707,
+                "toponimo": "RALEG1",
+                "n_lugar": 5,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1708,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.600817750784884,
+                    41.14749655278942
+                ]
+            },
+            "properties": {
+                "objectid": 1708,
+                "toponimo": "RSILD0",
+                "n_lugar": 8,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1709,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.636225346745354,
+                    41.15901444210413
+                ]
+            },
+            "properties": {
+                "objectid": 1709,
+                "toponimo": "ABOAV0",
+                "n_lugar": 6,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1710,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.618167126516768,
+                    41.14113788044387
+                ]
+            },
+            "properties": {
+                "objectid": 1710,
+                "toponimo": "RNALF0",
+                "n_lugar": 8,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1694,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.605941774003547,
+                    41.146769838834814
+                ]
+            },
+            "properties": {
+                "objectid": 1694,
+                "toponimo": "RPMAN0",
+                "n_lugar": 10,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1698,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.642625536926419,
+                    41.14807237240157
+                ]
+            },
+            "properties": {
+                "objectid": 1698,
+                "toponimo": "ROURO0",
+                "n_lugar": 11,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1690,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.610024255117237,
+                    41.15095860408838
+                ]
+            },
+            "properties": {
+                "objectid": 1690,
+                "toponimo": "RTRIN0",
+                "n_lugar": 11,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1686,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.608985742247821,
+                    41.14792351591929
+                ]
+            },
+            "properties": {
+                "objectid": 1686,
+                "toponimo": "PDJPR0",
+                "n_lugar": 27,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1712,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.606195944166306,
+                    41.15440666182389
+                ]
+            },
+            "properties": {
+                "objectid": 1712,
+                "toponimo": "RCARV0",
+                "n_lugar": 3,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1717,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.614102943017821,
+                    41.149543335251614
+                ]
+            },
+            "properties": {
+                "objectid": 1717,
+                "toponimo": "RJFAL0",
+                "n_lugar": 12,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1716,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.61278662955842,
+                    41.150128099883474
+                ]
+            },
+            "properties": {
+                "objectid": 1716,
+                "toponimo": "RDRJO0",
+                "n_lugar": 6,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1711,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.617354854232833,
+                    41.15308636681746
+                ]
+            },
+            "properties": {
+                "objectid": 1711,
+                "toponimo": "RCEDO0",
+                "n_lugar": 4,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1713,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.609573868491044,
+                    41.15094603875522
+                ]
+            },
+            "properties": {
+                "objectid": 1713,
+                "toponimo": "RFTOM0",
+                "n_lugar": 8,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1734,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.599988872577617,
+                    41.18269281996984
+                ]
+            },
+            "properties": {
+                "objectid": 1734,
+                "toponimo": "APHMO0",
+                "n_lugar": 11,
+                "par_gra": "S"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 4156,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -8.635695091243582,
+                    41.159252710205536
+                ]
+            },
+            "properties": {
+                "objectid": 4156,
+                "toponimo": "RJDEU0",
+                "n_lugar": 4,
+                "par_gra": "S"
+            }
+        }
+    ]
+}
