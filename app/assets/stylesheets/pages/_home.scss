@@ -12,6 +12,8 @@ html {
 .mapboxgl-ctrl-geocoder--input {
   background-color:rgba(130,130,129, 0.3);
   color: white;
+  padding:0;
+
 
 }
 
@@ -27,6 +29,13 @@ html {
 .mapboxgl-ctrl-geocoder {
   // color: white;
   background-color: rgba(130,130,129, 0.3);
+}
+
+.mapboxgl-ctrl-top-right {
+  position: relative !important;
+  left: 10px;
+  right:10px;
+  margin-top: 10px;
 }
 
 *,
