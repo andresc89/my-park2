@@ -7,9 +7,12 @@ export default class extends Controller {
     apiKey: String,
     markers: Array
   }
-  static targets = [ "instructions", "map"]
+  static targets = [ "instructions", "map", "btns"]
 
   connect() {
+    this.markersValue.forEach((marker) => {
+      this.btnsTarget.insertAdjacentHTML("beforeend", marker.counter_btn)
+    })
 
     mapboxgl.accessToken = this.apiKeyValue
 
