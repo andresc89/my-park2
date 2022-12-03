@@ -69,7 +69,7 @@ export default class extends Controller {
     const streetNameJson = await streetNameQuery.json()
     const streetName = streetNameJson.features[0].place_name
     this.instructionsTarget.innerText = streetName
-    this.instructionsTarget.in = streetName
+    this.instructionsTarget.innerText =
 
 
     const query = await fetch(
@@ -207,6 +207,7 @@ export default class extends Controller {
       // use GetElement to get HTML Element from marker and add event
       marker.getElement().addEventListener('click', () => {
         alert("Clicked");
+        this.marker.innerText = streetName
 
       // Pass the element as an argument to the new marker
       new mapboxgl.Marker(customMarker)
