@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   def profile
     @user = current_user
   end
@@ -11,8 +10,7 @@ class UsersController < ApplicationController
   # end
 
   def update
-    raise
-    @user = User.find(params[:id])
+    @user = User.find(user_params)
     @user.update(user_params)
     redirect_to profile_path(@user)
   end

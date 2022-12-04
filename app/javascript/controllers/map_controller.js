@@ -7,9 +7,13 @@ export default class extends Controller {
     apiKey: String,
     markers: Array
   }
-  static targets = [ "instructions", "map"]
+  static targets = [ "instructions", "map", "btns"] // RETIRAR "btns" PARA REMOVER BOTÕES INFINITOS!
 
   connect() {
+
+   this.markersValue.forEach((marker) => {
+      this.btnsTarget.insertAdjacentHTML("beforeend", marker.counter_btn)
+      });
 
     mapboxgl.accessToken = this.apiKeyValue
 
@@ -69,7 +73,6 @@ export default class extends Controller {
     const streetNameJson = await streetNameQuery.json()
     const streetName = streetNameJson.features[0].place_name
     this.instructionsTarget.innerText = streetName
-    this.instructionsTarget.innerText =
 
 
     const query = await fetch(
@@ -216,11 +219,6 @@ export default class extends Controller {
         .addTo(this.map)
 
 
-      // new mapboxgl.Marker()
-      //   .setLngLat([ marker.lng, marker.lat ])
-      //   .setPopup(popup)
-      //   .addTo(this.map)
-
 
       #fitMapToMarkers() {
         const bounds = new mapboxgl.LngLatBounds()
@@ -229,6 +227,7 @@ export default class extends Controller {
         });
 
       }
-        this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 150 })
-  }
+        this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 150 });
+      })
+  })
 }
