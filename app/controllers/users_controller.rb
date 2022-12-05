@@ -10,11 +10,15 @@ class UsersController < ApplicationController
   # end
 
   def update
-    raise
     @user = User.find(user_params)
     @user.update(user_params)
     redirect_to profile_path(@user)
   end
+
+  # def park
+  #   @carlatitude
+  #   @carlongitude
+  # end
 
   private
 
