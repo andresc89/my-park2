@@ -40,8 +40,17 @@
 
 .nav-link {
   color: white;
+  margin-top: 8px;
+  text-align: end;
 }
 
 .navbar-toggler-icon {
   background-color: #03da9f;
 }
+
+.navbar-toggler {
+  background-color: #03da9f;
+  border-radius: 8px;
+}
+
+

@@ -14,9 +14,9 @@
             <a class="nav-link" href="#">Features</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#">MyProfile</a>
+            <a class="nav-link" href="users/profile.html">MyProfile</a>
           </li>
-          <li> <% if user_signed_in? %>
+          <li class="nav-link"> <% if user_signed_in? %>
       <div> <% current_user.first_name %> </div>
       <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "btn" %>
       <% else %>
@@ -29,8 +29,6 @@
               <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
             </div>
           </li>
-          <!--li class="nav-item"-->
-          <!--/li-->
       </ul>
     </div>
   </div>
