@@ -10,13 +10,13 @@ export default class extends Controller {
   static targets = [ "instructions", "map", "btns"] // RETIRAR "btns" PARA REMOVER BOTÕES INFINITOS!
 
   connect() {
+    console.log("after connect")
 
    this.markersValue.forEach((marker) => {
       this.btnsTarget.insertAdjacentHTML("beforeend", marker.counter_btn)
       });
 
     mapboxgl.accessToken = this.apiKeyValue
-
 
 
     this.map = new mapboxgl.Map({
@@ -217,17 +217,18 @@ export default class extends Controller {
         .setLngLat([marker.lng, marker.lat])
         .setPopup(popup)
         .addTo(this.map)
+      });
 
 
 
-      #fitMapToMarkers() {
-        const bounds = new mapboxgl.LngLatBounds()
-        this.markersValue.forEach(marker => {
-          bounds.extend([marker.lng, marker.lat])
-        });
+    #fitMapToMarkers() {
+      const bounds = new mapboxgl.LngLatBounds()
+      this.markersValue.forEach(marker => {
+      bounds.extend([marker.lng, marker.lat])
+      });
 
       }
-        this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 150 });
-      })
-  })
+    })
+    this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 150 });
+  }
 }
