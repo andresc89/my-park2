@@ -1,5 +1,6 @@
 import { Controller } from "@hotwired/stimulus"
 import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder"
+import { end } from "@popperjs/core";
 
 
 export default class extends Controller {
@@ -7,15 +8,8 @@ export default class extends Controller {
     apiKey: String,
     markers: Array
   }
-  static targets = [ "instructions", "map", "btns"] // RETIRAR "btns" PARA REMOVER BOTÕES INFINITOS!
-
+  static targets = [ "instructions", "map"]
   connect() {
-
-
-    
-    this.markersValue.forEach((marker) => {
-      this.btnsTarget.insertAdjacentHTML("beforeend", marker.counter_btn)
-      });
 
     mapboxgl.accessToken = this.apiKeyValue
 
@@ -27,9 +21,6 @@ export default class extends Controller {
       // style: "mapbox://styles/lateingame/clb28me8n003h14pprlv7piz9"
     })
     this.#addMarkersToMap()
-    if (this.markersValue.length) { this.#fitMapToMarkers() }
-
-    this.#fitMapToMarkers()
 
     this.map.addControl(new MapboxGeocoder({
       accessToken: mapboxgl.accessToken,
@@ -51,16 +42,15 @@ export default class extends Controller {
         // Draw an arrow next to the location dot to indicate which direction the device is heading.
         showUserHeading: true
       })
-    );
-    this.getUsersLocation()
-
+      );
+      this.getUsersLocation()
   }
 
   //       // TENTATIVA DE NAVEGAÇÃO COMPLEXA DO MAPBOX - USER ROUTING STARTS HERE
   getUsersLocation() {
     navigator.geolocation.getCurrentPosition((position) => {
       this.start = [position.coords.longitude, position.coords.latitude]
-      // this.start = [10,10]
+      this.#fitMapToMarkers(this.start)
       this.connectRoute()
     })
   }
@@ -74,7 +64,8 @@ export default class extends Controller {
     const streetNameQuery = await fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${end[0]},${end[1]}.json?access_token=${mapboxgl.accessToken}`)
     const streetNameJson = await streetNameQuery.json()
     const streetName = streetNameJson.features[0].place_name
-    this.instructionsTarget.innerText = streetName
+    this.instructionsTarget.querySelector(".street-name")
+      .innerText = streetName
 
 
 
@@ -211,26 +202,23 @@ export default class extends Controller {
       customMarker.style.width = "25px"
       customMarker.style.height = "25px"
 
+
       // Pass the element as an argument to the new marker
-      new mapboxgl.Marker(customMarker)
+      const newMarker = new mapboxgl.Marker(customMarker)
         .setLngLat([marker.lng, marker.lat])
         .setPopup(popup)
         .addTo(this.map)
 
-
-      // new mapboxgl.Marker()
-      //   .setLngLat([ marker.lng, marker.lat ])
-      //   .setPopup(popup)
-      //   .addTo(this.map)
-    })
+          newMarker.getElement().addEventListener("click", (event) => {
+            this.instructionsTarget.querySelector(".park-form")
+              .innerHTML = marker.counter_btn
+          })
+      })
 
   }
-  #fitMapToMarkers() {
+  #fitMapToMarkers(coords) {
     const bounds = new mapboxgl.LngLatBounds()
-    this.markersValue.forEach(marker => {
-      bounds.extend([marker.lng, marker.lat])
-    });
-
+    bounds.extend(coords)
     this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 150 })
   }
 }
