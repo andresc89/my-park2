@@ -435,5 +435,12 @@ header .container {
     color: white !important
 }
 
- 
+ #cancel_btn {
+  padding: 8px;
+  background: transparent;
+  border: solid 2px white;
+  border-radius: 12px;
+  color: white;
+
+ }
 }
