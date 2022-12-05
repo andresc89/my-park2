@@ -1,5 +1,10 @@
 <section class="vh-100 light">
+
   <div class="container py-5 h-100">
+    <div class= "d-flex justify-content-around">
+      <a class="back_btn" href="/">Back</a>
+      <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "btn" %>
+      </div>
     <div class=" card_container_profile row d-flex justify-content-center align-items-center h-100">
       <div class="card_total_info">
 
@@ -20,8 +25,8 @@
                 <p class= "details">Address:</p>
                 <p style="color: white">Av. Serpa Pinto 311, 4450-718 Matosinhos</p>
                 <br>
-              <a class="btn" href="edit.html" >Edit</a>
             </div>
+              <a class="btn w-100" href="edit.html" >Edit</a>
                 <br>
         </div>
       </div>
