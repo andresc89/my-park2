@@ -19,8 +19,10 @@ export default class extends Controller {
       // style: "mapbox://styles/lateingame/clb28me8n003h14pprlv7piz9"
     })
 
+
     this.#addMarkersToMap()
     // this.#addCarMarkerToMap()
+
 
     this.map.addControl(new MapboxGeocoder({
       accessToken: mapboxgl.accessToken,
@@ -214,6 +216,7 @@ export default class extends Controller {
         // .setPopup(popup)
         .addTo(this.map)
 
+
         newMarker.getElement().addEventListener("click", (event) => {
           this.instructionsTarget.querySelector(".street-availability").innerHTML = `Occupation: ${marker.availability}%`
           this.instructionsTarget.querySelector(".park-form")
@@ -237,4 +240,3 @@ export default class extends Controller {
         bounds.extend(coords)
         this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 150 })
       }
-}

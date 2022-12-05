@@ -1,7 +1,7 @@
 
   <div class="container main">
+    <a class="back_btns d-block" href="profile.html" >Back</a>
     <section class="container_edit light">
-      <%= link_to "Back", :back %>
       <div class="card">
         <div class="container">
           <h2 class= "edit_title">Edit <%= resource_name.to_s.humanize %></h2>
@@ -36,8 +36,9 @@
                 <%= f.button :submit, "Update" %>
               </div>
               <% end %>
+              <br>
               <div class="d-flex align-items-center">
-                <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, id: "btn btn-link" %>
+                <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, id: "cancel_btn" %>
             </div>
           </div>
         </div>

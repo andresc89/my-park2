@@ -1,40 +1,31 @@
-<div class="big-wrapper light">
-        <%# <img src="./img/shape.png" alt="" class="shape" /> %>
+<header>
 
-        <header>
-          <div class="container">
-            <div class="logo">
-              <%= image_tag "logo.png" %>
-              <h3>My Park</h3>
-            </div>
 
-            <div class="links">
-              <ul>
-                <li><a href="#">Features</a></li>
-                <li><a href="/users/profile">My Profile</a></li>
-                <li> <% if user_signed_in? %>
-          <div> <% current_user.first_name %> </div>
-        <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "btn" %>
-        <% else %>
-          <%= link_to "Sign in", user_session_path, class: "btn" %>
-        <% end %></li>
+  <div class="overlay"></div>
 
-              </ul>
-            </div>
-
-            <div class="overlay"></div>
-
-            <div class="hamburger-menu">
-              <div class="bar"></div>
-            </div>
-          </div>
-        </header>
+    <div class="hamburger-menu">
+              <%# <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
+                </li>
+              </ul> %>
+      <div class="bar"></div>
+    </div>
+  </div>
+</header>
+<body>
 
         <div class="showcase-area">
           <div class="container">
             <div class="left">
               <div class="big-title">
-                <h1>Getting there together,</h1>
+                <p class="h1">Getting there together,</p>
                 <h1>Parking made easy.</h1>
               </div>
               <p class="text">
@@ -42,7 +33,7 @@
                 You'll never be late for that business meeting
                 or your best friend's dinner party!
               </p>
-              <div class="cta">
+              <div>
                 <a href="/streets" class="btn">Get started</a>
               </div>
             </div>
@@ -63,6 +54,7 @@
         </div>
       </div>
     </main>
+</body>
 
     <!-- JavaScript Files -->
 

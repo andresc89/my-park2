@@ -62,6 +62,7 @@ img {
 
 a {
   text-decoration: none;
+  color: #fff;
 }
 
 .big-wrapper {
@@ -133,7 +134,6 @@ header .container {
 
 .links a {
   color: var(--lightTwo);
-  margin-right: 50px;
   display: inline-block;
   transition: 0.3s;
 }
@@ -147,10 +147,24 @@ header .container {
   display: inline-block;
   padding: 0.9rem 1.9rem;
   color: #fff !important;
-  background-color: var(--mainColor);
+  background-color: #03DA9F;
   border-radius: 16px;
   text-transform: capitalize;
   transition: 0.3s;
+}
+
+.before_signin {
+  margin-right: 50px;
+}
+
+.hide_btns {
+  visibility: hidden;
+}
+
+.back_btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn:hover {
@@ -219,13 +233,13 @@ header .container {
 
 .big-title {
   font-size: 1.4rem;
-  color: var(--darkOne);
+  color: white;
   text-transform: capitalize;
   line-height: 1.4;
 }
 
 .text {
-  color: var(--lightOne);
+  color: #828281 !important;
   font-size: 1.1rem;
   margin: 1.9rem 0 2.5rem;
   max-width: 600px;
@@ -415,4 +429,18 @@ header .container {
   .showcase-area .btn {
     font-size: 0.8rem;
   }
+
+
+  .h1 {
+    color: white !important
+}
+
+ #cancel_btn {
+  padding: 8px;
+  background: transparent;
+  border: solid 2px white;
+  border-radius: 12px;
+  color: white;
+
+ }
 }
