@@ -141,13 +141,13 @@ export default class extends Controller {
       this.map.on('dblclick', (event) => {
         const coords = Object.keys(event.lngLat).map((key) => event.lngLat[key]);
         this.instructionsTarget.querySelector(".street-availability").innerText
-        event.preventDefault();
+
+        // event.preventDefault();
+
         //   this.instructionsTarget.querySelector(".street-availability")
         //     .innerText = "marker.counter_btn"
         //   counter += 10
         // })
-
-        this.instructionsTarget.querySelector(".street-availability").innerHTML = " "
         const end = {
           type: 'FeatureCollection',
           features: [
@@ -156,7 +156,7 @@ export default class extends Controller {
               properties: {},
               geometry: {
                 type: 'Point',
-                coordinates: coords
+                coordinates: coords,
               }
             }
           ]
@@ -213,6 +213,7 @@ export default class extends Controller {
         .addTo(this.map)
 
           newMarker.getElement().addEventListener("click", (event) => {
+            this.instructionsTarget.querySelector(".street-availability").innerHTML = `Occupation: ${marker.availability}%`
             this.instructionsTarget.querySelector(".park-form")
               .innerHTML = marker.counter_btn
           })
