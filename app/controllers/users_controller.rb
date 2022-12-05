@@ -10,7 +10,6 @@ class UsersController < ApplicationController
   # end
 
   def update
-    raise
     @user = User.find(user_params)
     @user.update(user_params)
     redirect_to profile_path(@user)

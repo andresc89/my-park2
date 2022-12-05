@@ -16,7 +16,8 @@ class StreetsController < ApplicationController
         lng: street.longitude,
         info_window: render_to_string(partial: "info_window", locals: { street: street }),
         image_url: helpers.asset_url("logowhite.png"),
-        counter_btn: render_to_string(partial: "shared/counter_btn", locals: { street: street, counter: @counter })
+        counter_btn: render_to_string(partial: "shared/counter_btn", locals: { street: street, counter: @counter }),
+        availability: street.counters.count
 
       }
     end
