@@ -143,7 +143,9 @@ export default class extends Controller {
       this.map.on('dblclick', (event) => {
         const coords = Object.keys(event.lngLat).map((key) => event.lngLat[key]);
         this.instructionsTarget.querySelector(".street-availability").innerText
+
         // event.preventDefault();
+
         //   this.instructionsTarget.querySelector(".street-availability")
         //     .innerText = "marker.counter_btn"
         //   counter += 10
