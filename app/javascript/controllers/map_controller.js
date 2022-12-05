@@ -13,8 +13,6 @@ export default class extends Controller {
 
     mapboxgl.accessToken = this.apiKeyValue
 
-
-
     this.map = new mapboxgl.Map({
       container: this.mapTarget,
       style: "mapbox://styles/mapbox/dark-v11"
@@ -26,12 +24,9 @@ export default class extends Controller {
       accessToken: mapboxgl.accessToken,
       mapboxgl: mapboxgl
     }))
-
     // Add zoom and rotation controls to the map. WORKING
-    this.map.addControl(new mapboxgl.NavigationControl());
-
+    // this.map.addControl(new mapboxgl.NavigationControl());
     // ADD FIND USER TO THE MAP
-
     this.map.addControl(
       new mapboxgl.GeolocateControl({
         positionOptions: {
@@ -145,6 +140,14 @@ export default class extends Controller {
       // this is where the code from the next step will go
       this.map.on('dblclick', (event) => {
         const coords = Object.keys(event.lngLat).map((key) => event.lngLat[key]);
+        this.instructionsTarget.querySelector(".street-availability").innerText
+        event.preventDefault();
+        //   this.instructionsTarget.querySelector(".street-availability")
+        //     .innerText = "marker.counter_btn"
+        //   counter += 10
+        // })
+
+        this.instructionsTarget.querySelector(".street-availability").innerHTML = " "
         const end = {
           type: 'FeatureCollection',
           features: [
@@ -206,7 +209,7 @@ export default class extends Controller {
       // Pass the element as an argument to the new marker
       const newMarker = new mapboxgl.Marker(customMarker)
         .setLngLat([marker.lng, marker.lat])
-        .setPopup(popup)
+        // .setPopup(popup)
         .addTo(this.map)
 
           newMarker.getElement().addEventListener("click", (event) => {
