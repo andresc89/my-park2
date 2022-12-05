@@ -133,7 +133,6 @@ header .container {
 
 .links a {
   color: var(--lightTwo);
-  margin-right: 50px;
   display: inline-block;
   transition: 0.3s;
 }
@@ -151,6 +150,15 @@ header .container {
   border-radius: 16px;
   text-transform: capitalize;
   transition: 0.3s;
+}
+
+.before_signin {
+  margin-right: 50px;
+}
+
+.hide_btns {
+  visibility: hidden;
+
 }
 
 .btn:hover {

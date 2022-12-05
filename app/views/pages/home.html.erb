@@ -10,14 +10,20 @@
 
             <div class="links">
               <ul>
-                <li><a href="#">Features</a></li>
-                <li><a href="/users/profile">My Profile</a></li>
+                <% if user_signed_in? %>
+
+                <li><a href="#" class= "before_signin">Features</a></li>
+                <li><a href="/users/profile" class= "before_signin">My Profile</a></li>
+                <% else %>
+                <li><a href="#" class= "hide_btns">Features</a></li>
+                <li><a href="/users/profile" class= "hide_btns">My Profile</a></li>
+                <% end %>
                 <li> <% if user_signed_in? %>
-          <div> <% current_user.first_name %> </div>
-        <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "btn" %>
-        <% else %>
-          <%= link_to "Sign in", user_session_path, class: "btn" %>
-        <% end %></li>
+                  <div> <% current_user.first_name %> </div>
+                <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "btn" %>
+                <% else %>
+                  <%= link_to "Sign in", user_session_path, class: "btn" %>
+                <% end %></li>
 
               </ul>
             </div>
