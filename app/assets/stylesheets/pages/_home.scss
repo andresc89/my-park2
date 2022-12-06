@@ -19,6 +19,9 @@ html {
 .mapboxgl-ctrl-group {
   background: #24685D !important;
   color: white !important;
+  position: relative;
+  top: 430px;
+  right: -10px;
 }
 
 // SEARCH BAR
@@ -474,5 +477,4 @@ header .container {
   margin: 8px -4px 0 0 !important;
   border-radius: 14px;
 }
-
 }
