@@ -142,16 +142,16 @@ export default class extends Controller {
         }
       });
       // this is where the code from the next step will go
-      this.map.on('dblclick', (event) => {
+      this.map.on('touchend', (event) => {
         const coords = Object.keys(event.lngLat).map((key) => event.lngLat[key]);
         this.instructionsTarget.querySelector(".street-availability").innerText
-
         // event.preventDefault();
-
         //   this.instructionsTarget.querySelector(".street-availability")
         //     .innerText = "marker.counter_btn"
         //   counter += 10
         // })
+
+        // this.instructionsTarget.querySelector(".street-availability").innerHTML = " "
         const end = {
           type: 'FeatureCollection',
           features: [
@@ -216,7 +216,6 @@ export default class extends Controller {
         // .setPopup(popup)
         .addTo(this.map)
 
-
         newMarker.getElement().addEventListener("click", (event) => {
           this.instructionsTarget.querySelector(".street-availability").innerHTML = `Occupation: ${marker.availability}%`
           this.instructionsTarget.querySelector(".park-form")
@@ -240,3 +239,4 @@ export default class extends Controller {
         bounds.extend(coords)
         this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 150 })
       }
+    }
