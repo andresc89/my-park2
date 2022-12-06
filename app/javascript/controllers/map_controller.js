@@ -11,6 +11,8 @@ export default class extends Controller {
   static targets = [ "instructions", "map"]
   connect() {
 
+    // connect car
+
     mapboxgl.accessToken = this.apiKeyValue
 
     this.map = new mapboxgl.Map({
