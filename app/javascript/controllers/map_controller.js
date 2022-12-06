@@ -12,8 +12,8 @@ export default class extends Controller {
   static targets = [ "instructions", "map"]
   connect() {
     // connect car
-    let carCoordsLng = this.carCoordsValue.lng
-    let carCoordsLat = this.carCoordsValue.lat
+    // let carCoordsLng = this.carCoordsValue.lng
+    // let carCoordsLat = this.carCoordsValue.lat
     mapboxgl.accessToken = this.apiKeyValue
 
     this.map = new mapboxgl.Map({
@@ -218,7 +218,7 @@ export default class extends Controller {
         // .setPopup(popup)
         .addTo(this.map)
 
-        newMarker.getElement().addEventListener("click", (event) => {
+        newMarker.getElement().addEventListener("touchend", (event) => {
           this.instructionsTarget.querySelector(".street-availability").innerHTML = `Occupation: ${marker.availability}%`
           this.instructionsTarget.querySelector(".park-form")
           .innerHTML = marker.counter_btn
@@ -246,7 +246,7 @@ export default class extends Controller {
     #addCarMarkerToMap() {
 
       const carButton = document.querySelector('.fa-solid.fa-car');
-      carButton.addEventListener('click',() => {
+      carButton.addEventListener('touchend',() => {
           const customMarker = document.createElement("div")
           customMarker.className = "marker"
           //customMarker.style.backgroundImage = `url('${marker.image_url}')`
