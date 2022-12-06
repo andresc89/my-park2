@@ -1,10 +1,12 @@
 #instructions {
-
-  height: 120px;
+  font-weight: 500;
+  height: 290px;
   width: 100%;
+  text-align: center;
   //top: 0px;
   bottom: 62px;
   background-color: rgba(130,130,129, 0.3);
+  backdrop-filter: blur(3.5px);
   //background: #828281;
   color: white;
   //overflow-y: scroll;
@@ -15,7 +17,23 @@
   margin: auto;
   //opacity: 30%;
   border-radius: 15px;
-  padding: 0;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
   right: 0;
   bottom: 0;
+}
+
+.street-name {
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.street-availability {
+  font-family: sans-serif;
+  font-size: 20px !important;
+}
+
+#park_btn .btn {
+  width: 80% !important;
 }
