@@ -20,7 +20,7 @@ html {
   background: #24685D !important;
   color: white !important;
   position: relative;
-  top: 430px;
+  top: 310px;
   right: -10px;
 }
 
@@ -31,6 +31,7 @@ html {
   padding:0;
   width: 90%;
   background-color: transparent;
+  height: 40px !important
 }
 
 .map {
@@ -474,7 +475,16 @@ header .container {
 
  .mapboxgl-ctrl-top-right .mapboxgl-ctrl {
   // float: right;
-  margin: 8px -4px 0 0 !important;
+  margin: 40px -4px 0 0 !important;
   border-radius: 14px;
 }
+
+.mapboxgl-ctrl-geocoder--icon {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 23px;
+  height: 23px;
+}
+
 }
