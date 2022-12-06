@@ -244,18 +244,19 @@ export default class extends Controller {
               // this.markersValue.forEach((marker) => {
                 const customMarker = document.createElement("div")
                 customMarker.className = "marker"
-                customMarker.style.backgroundImage = `url('${markersValue[0].image_url}')`
+                //customMarker.style.backgroundImage = `url('${marker.image_url}')`
                 customMarker.style.backgroundSize = "contain"
                 customMarker.style.width = "25px"
                 customMarker.style.height = "25px"
-                this.showCar(customMarker)
+                //this.showCar(customMarker)
 
               })
             }
 
     #showCar(customMarker) {
       const newMarker = new mapboxgl.Marker(customMarker)
-      .setLngLat({lng: -8.693849017008867, lat: 41.18360733974835})
+      // this.footersTarget.querySelector('.fa-solid.fa-car')
+      .setLngLat({lng: -8.693849017008867, lat: 41.68360733974835})
       .addTo(this.map)
     }
 
