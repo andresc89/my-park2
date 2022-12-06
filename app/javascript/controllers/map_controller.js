@@ -6,13 +6,14 @@ import { end } from "@popperjs/core";
 export default class extends Controller {
   static values = {
     apiKey: String,
-    markers: Array
+    markers: Array,
+    carCoords: Object
   }
   static targets = [ "instructions", "map"]
   connect() {
-
     // connect car
-
+    let carCoordsLng = this.carCoordsValue.lng
+    let carCoordsLat = this.carCoordsValue.lat
     mapboxgl.accessToken = this.apiKeyValue
 
     this.map = new mapboxgl.Map({
@@ -25,7 +26,6 @@ export default class extends Controller {
     this.#addMarkersToMap()
     this.#addCarMarkerToMap()
     this.#showCar()
-
     this.map.addControl(new MapboxGeocoder({
       accessToken: mapboxgl.accessToken,
       mapboxgl: mapboxgl
@@ -228,9 +228,14 @@ export default class extends Controller {
               lng: marker.lng,
               lat: marker.lat
             }), {
+              headers: { "Accept": "application/json"},
               method: "POST",
               body: new FormData(event.currentTarget)
             })
+              .then(response => response.json())
+              .then((data) => {
+                this.carCoordsValue = data
+              })
           })
         })
       })
@@ -242,29 +247,37 @@ export default class extends Controller {
 
       const carButton = document.querySelector('.fa-solid.fa-car');
       carButton.addEventListener('click',() => {
-              // console.log("oiiiii")
-              // this.markersValue.forEach((marker) => {
-                const customMarker = document.createElement("div")
-                customMarker.className = "marker"
-                //customMarker.style.backgroundImage = `url('${marker.image_url}')`
-                customMarker.style.backgroundSize = "contain"
-                customMarker.style.width = "25px"
-                customMarker.style.height = "25px"
-                //this.showCar(customMarker)
+          const customMarker = document.createElement("div")
+          customMarker.className = "marker"
+          //customMarker.style.backgroundImage = `url('${marker.image_url}')`
+          customMarker.style.backgroundSize = "contain"
+          customMarker.style.width = "25px"
+          customMarker.style.height = "25px"
+          //this.showCar(customMarker)
 
-              })
-            }
-
-    #showCar(customMarker) {
-      const newMarker = new mapboxgl.Marker(customMarker)
-      // this.footersTarget.querySelector('.fa-solid.fa-car')
-      .setLngLat({lng: -8.693849017008867, lat: 41.68360733974835})
-      .addTo(this.map)
-    }
-
-      #fitMapToMarkers(coords) {
-        const bounds = new mapboxgl.LngLatBounds()
-        bounds.extend(coords)
-        this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 150 })
+        })
       }
+
+      #showCar(customMarker) {
+        const newMarker = new mapboxgl.Marker(customMarker)
+        // this.footersTarget.querySelector('.fa-solid.fa-car')
+        .setLngLat({
+          lng: this.carCoordsValue.lng,
+          lat: this.carCoordsValue.lat
+        })
+        .addTo(this.map)
+        this.#fitMapToCar([this.carCoordsValue.lng, this.carCoordsValue.lat])
+      // this.#fitMapToCar(carCoords)
     }
+    #fitMapToCar(carCoords) {
+      const bounds = new mapboxgl.LngLatBounds()
+      bounds.extend(carCoords)
+      this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 150 })
+    }
+
+    #fitMapToMarkers(coords) {
+      const bounds = new mapboxgl.LngLatBounds()
+      bounds.extend(coords)
+      this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 150 })
+    }
+ }

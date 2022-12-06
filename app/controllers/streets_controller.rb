@@ -19,5 +19,9 @@ class StreetsController < ApplicationController
         availability: street.counters.count
       }
     end
+    @cars_position = JSON.generate({
+      lat: current_user.carlatitude,
+      lng: current_user.carlongitude
+    })
   end
 end
