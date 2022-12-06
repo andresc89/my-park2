@@ -13,25 +13,24 @@ export default class extends Controller {
 
     mapboxgl.accessToken = this.apiKeyValue
 
-
-
     this.map = new mapboxgl.Map({
       container: this.mapTarget,
       style: "mapbox://styles/mapbox/dark-v11"
       // style: "mapbox://styles/lateingame/clb28me8n003h14pprlv7piz9"
     })
+
+
     this.#addMarkersToMap()
+    // this.#addCarMarkerToMap()
+
 
     this.map.addControl(new MapboxGeocoder({
       accessToken: mapboxgl.accessToken,
       mapboxgl: mapboxgl
     }))
-
     // Add zoom and rotation controls to the map. WORKING
-    this.map.addControl(new mapboxgl.NavigationControl());
-
+    // this.map.addControl(new mapboxgl.NavigationControl());
     // ADD FIND USER TO THE MAP
-
     this.map.addControl(
       new mapboxgl.GeolocateControl({
         positionOptions: {
@@ -48,7 +47,7 @@ export default class extends Controller {
 
   //       // TENTATIVA DE NAVEGAÇÃO COMPLEXA DO MAPBOX - USER ROUTING STARTS HERE
   getUsersLocation() {
-    navigator.geolocation.getCurrentPosition((position) => {
+    navigator.geolocation.watchPosition((position) => {
       this.start = [position.coords.longitude, position.coords.latitude]
       this.#fitMapToMarkers(this.start)
       this.connectRoute()
@@ -145,6 +144,14 @@ export default class extends Controller {
       // this is where the code from the next step will go
       this.map.on('dblclick', (event) => {
         const coords = Object.keys(event.lngLat).map((key) => event.lngLat[key]);
+        this.instructionsTarget.querySelector(".street-availability").innerText
+
+        // event.preventDefault();
+
+        //   this.instructionsTarget.querySelector(".street-availability")
+        //     .innerText = "marker.counter_btn"
+        //   counter += 10
+        // })
         const end = {
           type: 'FeatureCollection',
           features: [
@@ -153,7 +160,7 @@ export default class extends Controller {
               properties: {},
               geometry: {
                 type: 'Point',
-                coordinates: coords
+                coordinates: coords,
               }
             }
           ]
@@ -206,19 +213,30 @@ export default class extends Controller {
       // Pass the element as an argument to the new marker
       const newMarker = new mapboxgl.Marker(customMarker)
         .setLngLat([marker.lng, marker.lat])
-        .setPopup(popup)
+        // .setPopup(popup)
         .addTo(this.map)
 
-          newMarker.getElement().addEventListener("click", (event) => {
-            this.instructionsTarget.querySelector(".park-form")
-              .innerHTML = marker.counter_btn
+
+        newMarker.getElement().addEventListener("click", (event) => {
+          this.instructionsTarget.querySelector(".street-availability").innerHTML = `Occupation: ${marker.availability}%`
+          this.instructionsTarget.querySelector(".park-form")
+          .innerHTML = marker.counter_btn
+          this.instructionsTarget.querySelector("form").addEventListener("submit", (event) => {
+            event.preventDefault()
+            fetch(event.currentTarget.action + "/?" + new URLSearchParams({
+              lng: marker.lng,
+              lat: marker.lat
+            }), {
+              method: "POST",
+              body: new FormData(event.currentTarget)
+            })
           })
+        })
       })
 
-  }
-  #fitMapToMarkers(coords) {
-    const bounds = new mapboxgl.LngLatBounds()
-    bounds.extend(coords)
-    this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 150 })
-  }
-}
+    }
+      #fitMapToMarkers(coords) {
+        const bounds = new mapboxgl.LngLatBounds()
+        bounds.extend(coords)
+        this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 150 })
+      }
