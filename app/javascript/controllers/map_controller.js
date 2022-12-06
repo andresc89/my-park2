@@ -242,6 +242,7 @@ export default class extends Controller {
 
       const carButton = document.querySelector('.fa-solid.fa-car');
       carButton.addEventListener('click',() => {
+                
               // console.log("oiiiii")
               // this.markersValue.forEach((marker) => {
                 const customMarker = document.createElement("div")
