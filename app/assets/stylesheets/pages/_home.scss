@@ -9,6 +9,12 @@ html {
   color: #03DA9F;
 }
 
+
+.bg-dark {
+  background-color: rgba(130, 130, 129, 0.3) !important;
+  // opacity: 50%;
+}
+
 .mapboxgl-ctrl-logo {
   display: none !important;
 }
