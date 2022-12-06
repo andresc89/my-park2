@@ -267,7 +267,6 @@ export default class extends Controller {
         })
         .addTo(this.map)
         this.#fitMapToCar([this.carCoordsValue.lng, this.carCoordsValue.lat])
-      // this.#fitMapToCar(carCoords)
     }
     #fitMapToCar(carCoords) {
       const bounds = new mapboxgl.LngLatBounds()

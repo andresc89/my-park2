@@ -1,5 +1,6 @@
-<div class="container" style="width: 100%; height:100vh; padding:0px;">
-  <div data-controller="map"
+<div class="container" style="width: 100%; height:92vh; padding:0px;">
+  <div class="row">
+    <div class="main_map" data-controller="map"
       data-map-markers-value="<%= @markers.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
       data-map-car-coords-value="<%= @cars_position %>">
@@ -17,8 +18,7 @@
             <div class="park-form" id="park_btn"></div>
           </div>
         </div>
-    <div class="footer">
-      <%= render "shared/footer" %>
+    <div class="footer"><%= render "shared/footer" %>
     </div>
   </div>
 </div>
