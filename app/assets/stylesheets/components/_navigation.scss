@@ -16,7 +16,8 @@
   align-items: center;
   margin: auto;
   //opacity: 30%;
-  border-radius: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   padding-top: 30px;
   padding-left: 30px;
   padding-right: 30px;
@@ -24,6 +25,14 @@
   bottom: 0;
 }
 
+// . {
+//   background-color: rgba(130, 130, 129, 0.3) !important;
+// }
+
+.bg-dark {
+  background-color: rgba(130, 130, 129, 0.3) !important;
+  padding: 0px ;
+}
 .street-name {
   font-weight: bold;
   font-size: 26px;
