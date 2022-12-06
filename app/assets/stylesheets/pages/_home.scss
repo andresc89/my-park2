@@ -8,6 +8,15 @@ html {
 #edit_user {
   color: #03DA9F;
 }
+
+.mapboxgl-ctrl-logo {
+  display: none !important;
+}
+
+.mapboxgl-compact{
+  display: none !important;
+}
+
 // LOCATION ICON
 
 .mapboxgl-ctrl mapboxgl-ctrl-group {
