@@ -237,6 +237,7 @@ export default class extends Controller {
         .addTo(this.map)
 
         newMarker.getElement().addEventListener("touchend", (event) => {
+          document.querySelector(".navbar-toggler").click()
           this.instructionsTarget.querySelector(".street-availability").innerHTML = `Occupation: ${marker.availability}%`
           this.instructionsTarget.querySelector(".park-form")
           .innerHTML = marker.counter_btn
@@ -255,7 +256,6 @@ export default class extends Controller {
               this.carCoordsValue = data
             })
 
-            // this.carMarker.remove()
 
             this.#showCar({
               lng: marker.lng,
