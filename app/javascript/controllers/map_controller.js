@@ -10,19 +10,21 @@ export default class extends Controller {
   }
   static targets = [ "instructions", "map"]
   connect() {
-    if (this.carCoordsValue == undefined) {  // se estiver nil, esconde o form
+    // CHECK USER PARK LOCATION, IF UNDEFINED, HIDES FORM
+    if (this.carCoordsValue == undefined) {
       this.instructionsTarget.querySelector(".leavepark").style.display = "none"
     }
-    // se não estiver nil, vai mostrar o form e ver onde clica o user
+    // IF NOT NILL, IT WILL SHOW THE FORM AND SEE USER CLICK
     this.instructionsTarget.querySelector(".leavepark").style.display = "inline"
-    // se o click for sim, só esconde o form
+    // IF USER IS PARKED, HIDES FORM
     this.instructionsTarget.querySelector(".yes-btn").addEventListener("click", (event) => {
       this.instructionsTarget.querySelector(".leavepark").style.display = "none"
     })
-    // se o click for não, ele remove o pin do mapa e esconde o form
+    // IF USER IS NOT PARKED, REMOVES PARKING LOCATION AND HIDES FORM AGAIN
     this.instructionsTarget.querySelector(".no-btn").addEventListener("click", (event) => {
       this.carMarker.remove()
       this.instructionsTarget.querySelector(".leavepark").style.display = "none"
+      this.carCoordsValue.save
     })
 
     mapboxgl.accessToken = this.apiKeyValue
@@ -279,6 +281,9 @@ export default class extends Controller {
         .setLngLat(coords)
         .addTo(this.map)
         this.#fitMapToCar([coords.lng, coords.lat])
+        // this.start()
+        // this.connectRoute()
+        // this.getRoute()
     }
     #fitMapToCar(carCoords) {
       const bounds = new mapboxgl.LngLatBounds()
