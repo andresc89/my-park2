@@ -1,10 +1,3 @@
-const resizeOps = () => {
-  document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + "px");
-};
-
-resizeOps();
-window.addEventListener("resize", resizeOps);
-
 import { Controller } from "@hotwired/stimulus"
 import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder"
 import { end } from "@popperjs/core";
@@ -18,6 +11,21 @@ export default class extends Controller {
   }
   static targets = [ "instructions", "map"]
   connect() {
+    // MODAL
+    const modal = document.querySelector(".modal");
+    const trigger = document.querySelector(".trigger");
+    const closeButton = document.querySelector(".close-button");
+    function toggleModal() {
+        modal.classList.toggle("show-modal");
+    }
+    function windowOnClick(event) {
+        if (event.target === modal) {
+            toggleModal();
+        }
+    }
+    trigger.addEventListener("click", toggleModal);
+    closeButton.addEventListener("click", toggleModal);
+    window.addEventListener("click", windowOnClick);
     // connect car
     // let carCoordsLng = this.carCoordsValue.lng
     // let carCoordsLat = this.carCoordsValue.lat
@@ -32,7 +40,7 @@ export default class extends Controller {
 
     this.#addMarkersToMap()
     this.#addCarMarkerToMap()
-    this.#showCar()
+    this.#showCar({lng: this.carCoordsValue.lng, lat: this.carCoordsValue.lat})
     this.map.addControl(new MapboxGeocoder({
       accessToken: mapboxgl.accessToken,
       mapboxgl: mapboxgl
@@ -230,7 +238,7 @@ export default class extends Controller {
           this.instructionsTarget.querySelector(".park-form")
           .innerHTML = marker.counter_btn
           this.instructionsTarget.querySelector("form").addEventListener("submit", (event) => {
-            event.preventDefault()
+            // event.preventDefault()
             fetch(event.currentTarget.action + "/?" + new URLSearchParams({
               lng: marker.lng,
               lat: marker.lat
@@ -239,10 +247,15 @@ export default class extends Controller {
               method: "POST",
               body: new FormData(event.currentTarget)
             })
-              .then(response => response.json())
-              .then((data) => {
-                this.carCoordsValue = data
-              })
+            marker.removeLayer()
+            .then(response => response.json())
+            .then((data) => {
+              this.carCoordsValue = data
+            })
+            this.#showCar({
+              lng: marker.lng,
+              lat: marker.lat
+            })
           })
         })
       })
@@ -265,15 +278,12 @@ export default class extends Controller {
         })
       }
 
-      #showCar(customMarker) {
-        const newMarker = new mapboxgl.Marker(customMarker)
+      #showCar(coords) {
+        const newMarker = new mapboxgl.Marker(coords)
         // this.footersTarget.querySelector('.fa-solid.fa-car')
-        .setLngLat({
-          lng: this.carCoordsValue.lng,
-          lat: this.carCoordsValue.lat
-        })
+        .setLngLat(coords)
         .addTo(this.map)
-        this.#fitMapToCar([this.carCoordsValue.lng, this.carCoordsValue.lat])
+        this.#fitMapToCar([coords.lng, coords.lat])
     }
     #fitMapToCar(carCoords) {
       const bounds = new mapboxgl.LngLatBounds()
