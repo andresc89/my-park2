@@ -210,6 +210,14 @@ export default class extends Controller {
     });
   }
 
+  flyToCar(event) {
+    event.preventDefault()
+    this.map.flyTo({
+      center: [this.carCoordsValue.lng, this.carCoordsValue.lat],
+      essential: true
+    });
+  }
+
   #addMarkersToMap() {
     this.markersValue.forEach((marker) => {
       const popup = new mapboxgl.Popup().setHTML(marker.info_window)
