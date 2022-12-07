@@ -32,7 +32,7 @@ export default class extends Controller {
 
     this.#addMarkersToMap()
     this.#addCarMarkerToMap()
-    this.#showCar()
+    this.#showCar({lng: this.carCoordsValue.lng, lat: this.carCoordsValue.lat})
     this.map.addControl(new MapboxGeocoder({
       accessToken: mapboxgl.accessToken,
       mapboxgl: mapboxgl
@@ -243,6 +243,10 @@ export default class extends Controller {
               .then((data) => {
                 this.carCoordsValue = data
               })
+              this.#showCar({
+                lng: marker.lng,
+                lat: marker.lat
+              })
           })
         })
       })
@@ -265,15 +269,12 @@ export default class extends Controller {
         })
       }
 
-      #showCar(customMarker) {
-        const newMarker = new mapboxgl.Marker(customMarker)
+      #showCar(coords) {
+        const newMarker = new mapboxgl.Marker(coords)
         // this.footersTarget.querySelector('.fa-solid.fa-car')
-        .setLngLat({
-          lng: this.carCoordsValue.lng,
-          lat: this.carCoordsValue.lat
-        })
+        .setLngLat(coords)
         .addTo(this.map)
-        this.#fitMapToCar([this.carCoordsValue.lng, this.carCoordsValue.lat])
+        this.#fitMapToCar([coords.lng, coords.lat])
     }
     #fitMapToCar(carCoords) {
       const bounds = new mapboxgl.LngLatBounds()
