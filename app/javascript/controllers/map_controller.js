@@ -2,7 +2,6 @@ import { Controller } from "@hotwired/stimulus"
 import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder"
 import { end } from "@popperjs/core";
 
-
 export default class extends Controller {
   static values = {
     apiKey: String,
@@ -11,33 +10,27 @@ export default class extends Controller {
   }
   static targets = [ "instructions", "map"]
   connect() {
-    // MODAL
-    const modal = document.querySelector(".modal");
-    const trigger = document.querySelector(".trigger");
-    const closeButton = document.querySelector(".close-button");
-    function toggleModal() {
-        modal.classList.toggle("show-modal");
+    if (this.carCoordsValue == undefined) {  // se estiver nil, esconde o form
+      this.instructionsTarget.querySelector(".leavepark").style.display = "none"
     }
-    function windowOnClick(event) {
-        if (event.target === modal) {
-            toggleModal();
-        }
-    }
-    trigger.addEventListener("click", toggleModal);
-    closeButton.addEventListener("click", toggleModal);
-    window.addEventListener("click", windowOnClick);
-    // connect car
-    // let carCoordsLng = this.carCoordsValue.lng
-    // let carCoordsLat = this.carCoordsValue.lat
+    // se não estiver nil, vai mostrar o form e ver onde clica o user
+    this.instructionsTarget.querySelector(".leavepark").style.display = "inline"
+    // se o click for sim, só esconde o form
+    this.instructionsTarget.querySelector(".yes-btn").addEventListener("click", (event) => {
+      this.instructionsTarget.querySelector(".leavepark").style.display = "none"
+    })
+    // se o click for não, ele remove o pin do mapa e esconde o form
+    this.instructionsTarget.querySelector(".no-btn").addEventListener("click", (event) => {
+      this.carMarker.remove()
+      this.instructionsTarget.querySelector(".leavepark").style.display = "none"
+    })
+
     mapboxgl.accessToken = this.apiKeyValue
 
     this.map = new mapboxgl.Map({
       container: this.mapTarget,
       style: "mapbox://styles/mapbox/dark-v11"
-      // style: "mapbox://styles/lateingame/clb28me8n003h14pprlv7piz9"
     })
-
-
     this.#addMarkersToMap()
     this.#addCarMarkerToMap()
     this.#showCar({lng: this.carCoordsValue.lng, lat: this.carCoordsValue.lat})
@@ -238,7 +231,7 @@ export default class extends Controller {
           this.instructionsTarget.querySelector(".park-form")
           .innerHTML = marker.counter_btn
           this.instructionsTarget.querySelector("form").addEventListener("submit", (event) => {
-            // event.preventDefault()
+            event.preventDefault()
             fetch(event.currentTarget.action + "/?" + new URLSearchParams({
               lng: marker.lng,
               lat: marker.lat
@@ -247,11 +240,13 @@ export default class extends Controller {
               method: "POST",
               body: new FormData(event.currentTarget)
             })
-            marker.removeLayer()
             .then(response => response.json())
             .then((data) => {
               this.carCoordsValue = data
             })
+
+            // this.carMarker.remove()
+
             this.#showCar({
               lng: marker.lng,
               lat: marker.lat
@@ -279,7 +274,7 @@ export default class extends Controller {
       }
 
       #showCar(coords) {
-        const newMarker = new mapboxgl.Marker(coords)
+        this.carMarker = new mapboxgl.Marker(coords)
         // this.footersTarget.querySelector('.fa-solid.fa-car')
         .setLngLat(coords)
         .addTo(this.map)

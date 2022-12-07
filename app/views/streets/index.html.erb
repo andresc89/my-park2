@@ -1,40 +1,42 @@
+    <%# MAP STARTS HERE %>
 <div class="container" style="width: 100%; height:92vh; padding:0px;">
   <div class="row">
     <div class="main_map" data-controller="map"
       data-map-markers-value="<%= @markers.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
       data-map-car-coords-value="<%= @cars_position %>">
-    <div class="main_map">
-      <div class="map" style="width: 100%; height: 100vh;"
-        data-map-target="map">
-      </div>
-      <div class="collapse" id="navbarToggleExternalContent">
-  <div class="bg-dark p-4" id="instructions" data-map-target="instructions">
-    <h5 class="text-white h4"><h5 class="street-name"></h5></h5>
-    <span class="text-muted">
-    <div class="box_instructions">
-            <div class="street-availability"></div>
-            <br>
-            <div class="park-form" id="park_btn">
+       <div class="main_map">
+        <div class="map" style="width: 100%; height: 100vh;"data-map-target="map">
+        </div>
+      <%# MAP ENDS HERE  %>
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class="bg-dark p-4" id="instructions" data-map-target="instructions">
+            <h5 class="text-white h4"><h5 class="street-name"></h5></h5>
+            <span class="text-muted">
+              <div class="box_instructions">
+                <div class="street-availability"></div>
+                  <br>
+                       <div class="leavepark" style="display:none">
+                      <h5>Are you still parked here?</h5>
+                      <button class="yes-btn" type="button" data-map-target="instructions">Yes</button>
+                      <button class="no-btn" type="button" data-map-target="instructions">No</button>
+                    </div>
+                  <div class="park-form" id="park_btn">
+                  </div>
+              <%# PARK BOX STARTS HERE  %>
+
+              <%# PARK BOX ENDS HERE %>
+                  </div>
+                </span>
+             </div>
             </div>
-            <button class="trigger">Click here to trigger the modal!</button>
-              <div class="modal">
-                <div class="modal-content">
-                    <span class="close-button">&times;</span>
-                    <h1>Hello, I am a modal!</h1>
-                </div>
-              </div>
+          <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
           </div>
-    </span>
-  </div>
-</div>
-<nav class="navbar navbar-dark bg-dark">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </div>
-</nav>
+          </nav>
       <div class="row">
       <div class="footer"><%= render "shared/footer" %>
     </div>
