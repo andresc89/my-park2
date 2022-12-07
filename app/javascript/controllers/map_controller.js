@@ -1,14 +1,6 @@
-const resizeOps = () => {
-  document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + "px");
-};
-
-resizeOps();
-window.addEventListener("resize", resizeOps);
-
 import { Controller } from "@hotwired/stimulus"
 import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder"
 import { end } from "@popperjs/core";
-
 
 export default class extends Controller {
   static values = {
@@ -18,18 +10,29 @@ export default class extends Controller {
   }
   static targets = [ "instructions", "map"]
   connect() {
-    // connect car
-    // let carCoordsLng = this.carCoordsValue.lng
-    // let carCoordsLat = this.carCoordsValue.lat
+    // CHECK USER PARK LOCATION, IF UNDEFINED, HIDES FORM
+    if (this.carCoordsValue == undefined) {
+      this.instructionsTarget.querySelector(".leavepark").style.display = "none"
+    }
+    // IF NOT NILL, IT WILL SHOW THE FORM AND SEE USER CLICK
+    this.instructionsTarget.querySelector(".leavepark").style.display = "inline"
+    // IF USER IS PARKED, HIDES FORM
+    this.instructionsTarget.querySelector(".yes-btn").addEventListener("click", (event) => {
+      this.instructionsTarget.querySelector(".leavepark").style.display = "none"
+    })
+    // IF USER IS NOT PARKED, REMOVES PARKING LOCATION AND HIDES FORM AGAIN
+    this.instructionsTarget.querySelector(".no-btn").addEventListener("click", (event) => {
+      this.carMarker.remove()
+      this.instructionsTarget.querySelector(".leavepark").style.display = "none"
+      this.carCoordsValue.save
+    })
+
     mapboxgl.accessToken = this.apiKeyValue
 
     this.map = new mapboxgl.Map({
       container: this.mapTarget,
       style: "mapbox://styles/mapbox/dark-v11"
-      // style: "mapbox://styles/lateingame/clb28me8n003h14pprlv7piz9"
     })
-
-
     this.#addMarkersToMap()
     this.#addCarMarkerToMap()
     this.#showCar({lng: this.carCoordsValue.lng, lat: this.carCoordsValue.lat})
@@ -239,14 +242,17 @@ export default class extends Controller {
               method: "POST",
               body: new FormData(event.currentTarget)
             })
-              .then(response => response.json())
-              .then((data) => {
-                this.carCoordsValue = data
-              })
-              this.#showCar({
-                lng: marker.lng,
-                lat: marker.lat
-              })
+            .then(response => response.json())
+            .then((data) => {
+              this.carCoordsValue = data
+            })
+
+            // this.carMarker.remove()
+
+            this.#showCar({
+              lng: marker.lng,
+              lat: marker.lat
+            })
           })
         })
       })
@@ -270,11 +276,14 @@ export default class extends Controller {
       }
 
       #showCar(coords) {
-        const newMarker = new mapboxgl.Marker(coords)
+        this.carMarker = new mapboxgl.Marker(coords)
         // this.footersTarget.querySelector('.fa-solid.fa-car')
         .setLngLat(coords)
         .addTo(this.map)
         this.#fitMapToCar([coords.lng, coords.lat])
+        // this.start()
+        // this.connectRoute()
+        // this.getRoute()
     }
     #fitMapToCar(carCoords) {
       const bounds = new mapboxgl.LngLatBounds()
