@@ -45,13 +45,18 @@
 }
 
 .navbar-toggler-icon {
-  
+
   background-color: transparent;
 }
 
 .navbar-toggler {
   background-color: #03da9f;
   border-radius: 8px;
+}
+
+.homepage-toggler {
+  margin: 0px !important;
+  position: relative !important;
 }
 
 #drop_signout {
