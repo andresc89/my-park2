@@ -12,19 +12,21 @@ export default class extends Controller {
   connect() {
     // CHECK USER PARK LOCATION, IF UNDEFINED, HIDES FORM
     if (this.carCoordsValue == undefined) {
+      console.log(this.carCoordsValue)
       this.instructionsTarget.querySelector(".leavepark").style.display = "none"
     }
+    console.log(this.carCoordsValue)
     // IF NOT NILL, IT WILL SHOW THE FORM AND SEE USER CLICK
     this.instructionsTarget.querySelector(".leavepark").style.display = "inline"
     // IF USER IS PARKED, HIDES FORM
     this.instructionsTarget.querySelector(".yes-btn").addEventListener("click", (event) => {
       this.instructionsTarget.querySelector(".leavepark").style.display = "none"
     })
-    // IF USER IS NOT PARKED, REMOVES PARKING LOCATION AND HIDES FORM AGAIN
+    // IF USER IS PARKED, REMOVES PARKING LOCATION AND HIDES FORM AGAIN
     this.instructionsTarget.querySelector(".no-btn").addEventListener("click", (event) => {
+      console.log("here")
       this.carMarker.remove()
       this.instructionsTarget.querySelector(".leavepark").style.display = "none"
-      this.carCoordsValue.save
     })
 
     mapboxgl.accessToken = this.apiKeyValue
@@ -157,7 +159,7 @@ export default class extends Controller {
       this.map.on('touchend', (event) => {
         const coords = Object.keys(event.lngLat).map((key) => event.lngLat[key]);
         this.instructionsTarget.querySelector(".street-availability").innerText
-        // event.preventDefault();
+        event.preventDefault();
         //   this.instructionsTarget.querySelector(".street-availability")
         //     .innerText = "marker.counter_btn"
         //   counter += 10
@@ -243,6 +245,8 @@ export default class extends Controller {
           .innerHTML = marker.counter_btn
           this.instructionsTarget.querySelector("form").addEventListener("submit", (event) => {
             event.preventDefault()
+            this.carMarker.remove()
+            
             fetch(event.currentTarget.action + "/?" + new URLSearchParams({
               lng: marker.lng,
               lat: marker.lat
@@ -251,14 +255,16 @@ export default class extends Controller {
               method: "POST",
               body: new FormData(event.currentTarget)
             })
-              .then(response => response.json())
-              .then((data) => {
-                this.carCoordsValue = data
-              })
-              this.#showCar({
-                lng: marker.lng,
-                lat: marker.lat
-              })
+            .then(response => response.json())
+            .then((data) => {
+              this.carCoordsValue = data
+            })
+
+
+            this.#showCar({
+              lng: marker.lng,
+              lat: marker.lat
+            })
           })
         })
       })
@@ -282,11 +288,14 @@ export default class extends Controller {
       }
 
       #showCar(coords) {
-        const newMarker = new mapboxgl.Marker(coords)
+        this.carMarker = new mapboxgl.Marker(coords)
         // this.footersTarget.querySelector('.fa-solid.fa-car')
         .setLngLat(coords)
         .addTo(this.map)
         this.#fitMapToCar([coords.lng, coords.lat])
+        // this.start()
+        // this.connectRoute()
+        // this.getRoute()
     }
     #fitMapToCar(carCoords) {
       const bounds = new mapboxgl.LngLatBounds()
