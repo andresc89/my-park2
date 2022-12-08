@@ -1,14 +1,6 @@
-const resizeOps = () => {
-  document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + "px");
-};
-
-resizeOps();
-window.addEventListener("resize", resizeOps);
-
 import { Controller } from "@hotwired/stimulus"
 import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder"
 import { end } from "@popperjs/core";
-
 
 export default class extends Controller {
   static values = {
@@ -18,18 +10,29 @@ export default class extends Controller {
   }
   static targets = [ "instructions", "map"]
   connect() {
-    // connect car
-    // let carCoordsLng = this.carCoordsValue.lng
-    // let carCoordsLat = this.carCoordsValue.lat
+    // CHECK USER PARK LOCATION, IF UNDEFINED, HIDES FORM
+    if (this.carCoordsValue == undefined) {
+      this.instructionsTarget.querySelector(".leavepark").style.display = "none"
+    }
+    // IF NOT NILL, IT WILL SHOW THE FORM AND SEE USER CLICK
+    this.instructionsTarget.querySelector(".leavepark").style.display = "inline"
+    // IF USER IS PARKED, HIDES FORM
+    this.instructionsTarget.querySelector(".yes-btn").addEventListener("click", (event) => {
+      this.instructionsTarget.querySelector(".leavepark").style.display = "none"
+    })
+    // IF USER IS NOT PARKED, REMOVES PARKING LOCATION AND HIDES FORM AGAIN
+    this.instructionsTarget.querySelector(".no-btn").addEventListener("click", (event) => {
+      this.carMarker.remove()
+      this.instructionsTarget.querySelector(".leavepark").style.display = "none"
+      this.carCoordsValue.save
+    })
+
     mapboxgl.accessToken = this.apiKeyValue
 
     this.map = new mapboxgl.Map({
       container: this.mapTarget,
       style: "mapbox://styles/mapbox/dark-v11"
-      // style: "mapbox://styles/lateingame/clb28me8n003h14pprlv7piz9"
     })
-
-
     this.#addMarkersToMap()
     this.#addCarMarkerToMap()
     this.#showCar({lng: this.carCoordsValue.lng, lat: this.carCoordsValue.lat})
@@ -207,6 +210,14 @@ export default class extends Controller {
     });
   }
 
+  flyToCar(event) {
+    event.preventDefault()
+    this.map.flyTo({
+      center: [this.carCoordsValue.lng, this.carCoordsValue.lat],
+      essential: true
+    });
+  }
+
   #addMarkersToMap() {
     this.markersValue.forEach((marker) => {
       const popup = new mapboxgl.Popup().setHTML(marker.info_window)
@@ -226,6 +237,7 @@ export default class extends Controller {
         .addTo(this.map)
 
         newMarker.getElement().addEventListener("touchend", (event) => {
+          document.querySelector(".navbar-toggler").click()
           this.instructionsTarget.querySelector(".street-availability").innerHTML = `Occupation: ${marker.availability}%`
           this.instructionsTarget.querySelector(".park-form")
           .innerHTML = marker.counter_btn
@@ -239,6 +251,7 @@ export default class extends Controller {
               method: "POST",
               body: new FormData(event.currentTarget)
             })
+<<<<<<< HEAD
               .then(response => response.json())
               .then((data) => {
                 this.carCoordsValue = data
@@ -247,6 +260,18 @@ export default class extends Controller {
                 lng: marker.lng,
                 lat: marker.lat
               })
+=======
+            .then(response => response.json())
+            .then((data) => {
+              this.carCoordsValue = data
+            })
+
+
+            this.#showCar({
+              lng: marker.lng,
+              lat: marker.lat
+            })
+>>>>>>> 228dc8e26397c857aa3ee1f21fc0d99da30a88cb
           })
         })
       })
@@ -270,11 +295,21 @@ export default class extends Controller {
       }
 
       #showCar(coords) {
+<<<<<<< HEAD
         const newMarker = new mapboxgl.Marker(coords)
+=======
+        this.carMarker = new mapboxgl.Marker(coords)
+>>>>>>> 228dc8e26397c857aa3ee1f21fc0d99da30a88cb
         // this.footersTarget.querySelector('.fa-solid.fa-car')
         .setLngLat(coords)
         .addTo(this.map)
         this.#fitMapToCar([coords.lng, coords.lat])
+<<<<<<< HEAD
+=======
+        // this.start()
+        // this.connectRoute()
+        // this.getRoute()
+>>>>>>> 228dc8e26397c857aa3ee1f21fc0d99da30a88cb
     }
     #fitMapToCar(carCoords) {
       const bounds = new mapboxgl.LngLatBounds()
