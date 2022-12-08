@@ -62,7 +62,7 @@ export default class extends Controller {
 
   //       // TENTATIVA DE NAVEGAÇÃO COMPLEXA DO MAPBOX - USER ROUTING STARTS HERE
   getUsersLocation() {
-    navigator.geolocation.watchPosition((position) => {
+    navigator.geolocation.getUsersLocation((position) => {
       this.start = [position.coords.longitude, position.coords.latitude]
       this.#fitMapToMarkers(this.start)
       this.connectRoute()
@@ -293,7 +293,7 @@ export default class extends Controller {
         // this.footersTarget.querySelector('.fa-solid.fa-car')
         .setLngLat(coords)
         .addTo(this.map)
-        // this.#fitMapToCar([coords.lng, coords.lat])
+        this.#fitMapToCar([coords.lng, coords.lat])
         // this.start()
         // this.connectRoute()
         // this.getRoute()
