@@ -38,7 +38,7 @@ export default class extends Controller {
     })
     this.#addMarkersToMap()
     this.#addCarMarkerToMap()
-    this.#showCar({lng: this.carCoordsValue.lng, lat: this.carCoordsValue.lat})
+    // this.#showCar({lng: this.carCoordsValue.lng, lat: this.carCoordsValue.lat})
     this.map.addControl(new MapboxGeocoder({
       accessToken: mapboxgl.accessToken,
       mapboxgl: mapboxgl
