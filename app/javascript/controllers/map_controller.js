@@ -157,7 +157,7 @@ export default class extends Controller {
         }
       });
       // this is where the code from the next step will go
-      this.map.on('touchend', (event) => {
+      this.map.on('click', (event) => {
         const coords = Object.keys(event.lngLat).map((key) => event.lngLat[key]);
         this.instructionsTarget.querySelector(".street-availability").innerText
         event.preventDefault();
@@ -239,7 +239,7 @@ export default class extends Controller {
         // .setPopup(popup)
         .addTo(this.map)
 
-        newMarker.getElement().addEventListener("touchend", (event) => {
+        newMarker.getElement().addEventListener("click", (event) => {
           document.querySelector(".navbar-toggler").click()
           this.instructionsTarget.querySelector(".street-availability").innerHTML = `Occupation: ${marker.availability}%`
           this.instructionsTarget.querySelector(".park-form")
@@ -276,7 +276,7 @@ export default class extends Controller {
     #addCarMarkerToMap() {
 
       const carButton = document.querySelector('.fa-solid.fa-car');
-      carButton.addEventListener('touchend',() => {
+      carButton.addEventListener('click',() => {
           const customMarker = document.createElement("div")
           customMarker.className = "marker"
           //customMarker.style.backgroundImage = `url('${marker.image_url}')`
