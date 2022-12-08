@@ -1,5 +1,5 @@
 .navbar-lewagon {
-  justify-content: space-between;
+  justify-content: space-between !important;
   // background-color: transparent;
 
   // background: white;
@@ -54,9 +54,16 @@
   border-radius: 8px;
 }
 
+#homepage-fluid {
+  justify-content: space-between !important;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
 .homepage-toggler {
   margin: 0px !important;
   position: relative !important;
+
 }
 
 #drop_signout {
