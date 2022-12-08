@@ -246,7 +246,7 @@ export default class extends Controller {
           this.instructionsTarget.querySelector("form").addEventListener("submit", (event) => {
             event.preventDefault()
             this.carMarker.remove()
-            
+
             fetch(event.currentTarget.action + "/?" + new URLSearchParams({
               lng: marker.lng,
               lat: marker.lat
@@ -283,7 +283,7 @@ export default class extends Controller {
           customMarker.style.width = "25px"
           customMarker.style.height = "25px"
           //this.showCar(customMarker)
-
+          this.instructionsTarget.querySelector(".leavepark").style.display = "inline"
         })
       }
 
