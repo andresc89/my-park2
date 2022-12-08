@@ -251,7 +251,6 @@ export default class extends Controller {
               method: "POST",
               body: new FormData(event.currentTarget)
             })
-<<<<<<< HEAD
               .then(response => response.json())
               .then((data) => {
                 this.carCoordsValue = data
@@ -260,18 +259,6 @@ export default class extends Controller {
                 lng: marker.lng,
                 lat: marker.lat
               })
-=======
-            .then(response => response.json())
-            .then((data) => {
-              this.carCoordsValue = data
-            })
-
-
-            this.#showCar({
-              lng: marker.lng,
-              lat: marker.lat
-            })
->>>>>>> 228dc8e26397c857aa3ee1f21fc0d99da30a88cb
           })
         })
       })
@@ -295,21 +282,11 @@ export default class extends Controller {
       }
 
       #showCar(coords) {
-<<<<<<< HEAD
         const newMarker = new mapboxgl.Marker(coords)
-=======
-        this.carMarker = new mapboxgl.Marker(coords)
->>>>>>> 228dc8e26397c857aa3ee1f21fc0d99da30a88cb
         // this.footersTarget.querySelector('.fa-solid.fa-car')
         .setLngLat(coords)
         .addTo(this.map)
         this.#fitMapToCar([coords.lng, coords.lat])
-<<<<<<< HEAD
-=======
-        // this.start()
-        // this.connectRoute()
-        // this.getRoute()
->>>>>>> 228dc8e26397c857aa3ee1f21fc0d99da30a88cb
     }
     #fitMapToCar(carCoords) {
       const bounds = new mapboxgl.LngLatBounds()
