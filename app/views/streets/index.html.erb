@@ -1,13 +1,13 @@
 
     <%# MAP STARTS HERE %>
-<div class="container" style="width: 100%; height:84vh; padding:0px;">
+<div class="container" style="width: 100%; height:92vh; padding:0px;">
   <div class="row">
     <div class="main_map" data-controller="map"
       data-map-markers-value="<%= @markers.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
       data-map-car-coords-value="<%= @cars_position %>">
        <div class="main_map">
-        <div class="map" style="width: 100%; height: 90vh;"data-map-target="map">
+        <div class="map" style="width: 100%; height: 100vh;"data-map-target="map">
         </div>
       <%# MAP ENDS HERE  %>
         <div class="collapse" id="navbarToggleExternalContent" data-map-target="instructions">
