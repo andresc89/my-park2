@@ -10,6 +10,7 @@ export default class extends Controller {
   }
   static targets = [ "instructions", "map"]
   connect() {
+    document.querySelector(".navbar-toggler").click()
     // CHECK USER PARK LOCATION, IF UNDEFINED, HIDES FORM
     if (this.carCoordsValue == undefined) {
       console.log(this.carCoordsValue)

@@ -1,6 +1,6 @@
 #instructions {
   font-weight: 500;
-  height: 290px;
+  height: 300px;
   width: 100%;
   text-align: center;
   //top: 0px;
@@ -16,14 +16,15 @@
   align-items: center;
   margin: auto;
   //opacity: 30%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-top-left-radius: 15px !important;
+  border-top-right-radius: 15px !important;
   padding-top: 30px;
   padding-left: 30px;
   padding-right: 30px;
   right: 0;
-  bottom: 0;
-}
+  bottom: 33px;
+  position: absolute !important;
+  }
 
 // . {
 //   background-color: rgba(130, 130, 129, 0.3) !important;
@@ -35,7 +36,7 @@
 }
 .street-name {
   font-weight: bold;
-  font-size: 26px;
+  font-size: 18px;
 }
 
 .street-availability {
@@ -43,13 +44,37 @@
   font-size: 20px !important;
 }
 
-#park_btn .btn {
-  width: 80% !important;
+.submitpark {
+    width: 120px;
+  height: 50px;
 }
 
-#navigation {
+// #park_btn {
+//   width: 100px;
+//   height: 40px;
+// }
+
+.navbar-toggler {
   justify-content: center;
   background-color: transparent;
   position: absolute;
   margin-bottom: 60px;
+}
+
+.container-fluid {
+  justify-content: center !important;
+}
+
+.no-btn {
+  width: 50px;
+  height: 30px;
+}
+
+.yes-btn {
+  width: 50px;
+  height: 30px;
+}
+
+.park_btn {
+
 }
