@@ -1,5 +1,5 @@
 .navbar-lewagon {
-  justify-content: space-between;
+  justify-content: space-between !important;
   // background-color: transparent;
 
   // background: white;
@@ -45,13 +45,37 @@
 }
 
 .navbar-toggler-icon {
-  
+
   background-color: transparent;
 }
 
 .navbar-toggler {
   background-color: #03da9f;
   border-radius: 8px;
+}
+
+.right {
+  padding-bottom: 50px !important;
+}
+
+.submitpark {
+  margin-top: 6px !important;
+}
+
+#btn-home {
+  padding: 16px !important;
+}
+
+#homepage-fluid {
+  justify-content: space-between !important;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.homepage-toggler {
+  margin: 0px !important;
+  position: relative !important;
+
 }
 
 #drop_signout {
