@@ -62,7 +62,7 @@ export default class extends Controller {
 
   //       // TENTATIVA DE NAVEGAÇÃO COMPLEXA DO MAPBOX - USER ROUTING STARTS HERE
   getUsersLocation() {
-    navigator.geolocation.getUsersLocation((position) => {
+    navigator.geolocation.getCurrentPosition((position) => {
       this.start = [position.coords.longitude, position.coords.latitude]
       this.#fitMapToMarkers(this.start)
       this.connectRoute()
